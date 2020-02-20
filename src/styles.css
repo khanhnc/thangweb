@@ -2,9 +2,25 @@
 body {
   width: 100%;
   margin: auto;
-  background-color: lightblue;
+  background-color: whitesmoke;
 }
 
 html {
   font-family: 'Roboto', sans-serif;
+}
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.bg-dark{
+ /* background: transparent !important; */
+}
+
+.padding-0{
+  padding:0 !important;
 }
