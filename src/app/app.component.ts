@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { PageScrollService } from 'ngx-page-scroll-core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'studio';
+
+  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+    
+  }
+
+  ngOnInit(): void {
+   
+  }
 }

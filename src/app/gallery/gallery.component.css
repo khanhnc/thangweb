@@ -30,5 +30,13 @@ img {
   overflow: hidden;
 }
 .gallery-background {
-  background-color: #9E9E9E;
+  background-color: #212121  ;
+}
+a:hover {
+  cursor:pointer;
+}
+
+.img-thumbnail {
+  border: none !important;
+  border-radius: 0 !important;
 }

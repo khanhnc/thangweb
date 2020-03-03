@@ -9,7 +9,13 @@ import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ServiceComponent } from './service/service.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { Routes, RouterModule } from '@angular/router';
+const routes : Routes = [
+  {path:'', component: HomeComponent},
+  {path:'gallery', component:GalleryComponent },
+  {path:'contact', component:ContactComponent },
+  {path:'service', component:ServiceComponent }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,8 +27,9 @@ import { ContactComponent } from './contact/contact.component';
     ContactComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
