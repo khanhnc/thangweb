@@ -10,11 +10,10 @@ import { DOCUMENT } from '@angular/common';
 export class AppComponent {
   title = 'studio';
 
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+  constructor() {
     
   }
 
   ngOnInit(): void {
-   
   }
 }

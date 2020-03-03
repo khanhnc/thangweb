@@ -1,42 +1,47 @@
 .gallery-container {
-  background-color: gainsboro;
-  max-height: 50%;
-  margin-bottom: 20px;
+    background-color: gainsboro;
+    max-height: 50%;
+    margin-bottom: 20px;
 }
 
 .bg-red {
-  background-color: red;
-}
-.col-a{
+    background-color: red;
 }
 
+.col-a {}
+
 .container-fluid {
-padding: 0 !important;
+    padding: 0 !important;
 }
-.card-img, .card-img-top {
-  border-top-right-radius: 0 !important;
-  border-top-left-radius: 0 !important;
+
+.card-img,
+.card-img-top {
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
 }
 
 img {
-  max-width:100%;
-  max-height:100%;
+    max-width: 100%;
+    max-height: 100%;
 }
+
 .center-cropped {
-  width: 100px;
-  height: 100px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
+
 .gallery-background {
-  background-color: #212121  ;
+    background-color: #212121;
 }
+
 a:hover {
-  cursor:pointer;
+    cursor: pointer;
 }
 
 .img-thumbnail {
-  border: none !important;
-  border-radius: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
 }
