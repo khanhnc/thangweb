@@ -17,10 +17,10 @@ export class GalleryComponent implements OnInit {
     { id: 6, link: 'assets/images/gallery/gallery6.jpg' },
     { id: 7, link: 'assets/images/gallery/gallery7.jpg' },
     { id: 8, link: 'assets/images/gallery/gallery8.jpg' },
-    { id: 9, link: 'assets/images/gallery/gallery9.jpg' },
-    { id: 10, link: 'assets/images/gallery/gallery10.jpg' },
-    { id: 11, link: 'assets/images/gallery/gallery11.jpg' },
-    { id: 12, link: 'assets/images/gallery/gallery12.jpg' }
+    // { id: 9, link: 'assets/images/gallery/gallery9.jpg' },
+    // { id: 10, link: 'assets/images/gallery/gallery10.jpg' },
+    // { id: 11, link: 'assets/images/gallery/gallery11.jpg' },
+    // { id: 12, link: 'assets/images/gallery/gallery12.jpg' }
   ];
 
   current_img = { link: '' };

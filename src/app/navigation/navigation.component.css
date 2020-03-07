@@ -1,0 +1,26 @@
+.sticky {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100%;
+z-index: 1;
+}
+
+.navbar {
+    transition: background-color 0.5s ease;
+    font-size: 14px;
+    letter-spacing: .2em;
+}
+
+.navbar-nav>li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bg-dark {
+    background-color: black !important;
+}
+
+.header-icon {
+    text-align: center;
+    vertical-align: middle;
+}

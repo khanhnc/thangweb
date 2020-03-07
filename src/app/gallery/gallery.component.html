@@ -1,19 +1,14 @@
-<!-- Page Content -->
-<div class=" gallery-background">
-    <div class="container pt-5 pb-5">
-        <div class="row text-center text-lg-left">
-            <div *ngFor="let img of list_imgs" class="col-lg-3 col-md-4 col-6">
-                <a class="d-block mb-4 h-100" (click)="openImgDialog(img.id)">
-                    <img class=" img-thumbnail" [src]="img.link">
-                </a>
-            </div>
-        </div>
+<div class="gallery-container">
+    <div class="pb-5">
+        <h3 class="header-typo letter-space">GOC ANH</h3>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="imgModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <img class="img-fluid img-thumbnail" [src]="current_img.link">
-            </div>
-        </div>
-    </div>
+    <ul id="rig">
+        <li *ngFor="let i of list_imgs">
+            <a class="rig-cell" href="#">
+                <img class="rig-img" [src]="i.link">
+                <span class="rig-overlay"></span>
+                <span class="rig-text">Lorem Ipsum Dolor</span>
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+.home-container {
+    height: 70vh;
+    background-color: gray;
+    background-image: url('https://images.unsplash.com/photo-1469212044023-0e55b4b9745a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    height: 70vh;
+    background: #0a0a0a6b;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.landing-text {
+    color: gainsboro;
+    text-align: center;
+}
+
+.landing-text h3 {
+    font-family: 'Dosis', Arial, cursive;
+    letter-spacing: .5em;
+}
+
+.landing-text hr {
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: gainsboro;
+}

@@ -1,0 +1,40 @@
+.about-container {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.introduce-text {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+    background-color: whitesmoke;
+}
+
+.card-img, .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card-text {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.img-description p {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: oblique;
+}
+
+h3 {
+    color: black;
+}
