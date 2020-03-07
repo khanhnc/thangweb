@@ -2,7 +2,7 @@
   "name": "studio",
   "version": "0.0.0",
   "scripts": {
-    "deploy": "ng build --prod --base-href https://khanhnc.github.io/thangweb/ && ngh",
+    "deploy": "ng build --prod --base-href https://khanhnc.github.io/thangweb/ && ngh --dir=dist/studio",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
