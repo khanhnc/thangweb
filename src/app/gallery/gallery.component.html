@@ -1,14 +1,23 @@
 <div class="gallery-container">
     <div class="pb-5">
         <h3 class="header-typo letter-space">GOC ANH</h3>
+        <p class="pb-3 pt-3">Nhung buc anh chon loc duoc chung toi ghi lai bang .... </p>
     </div>
-    <ul id="rig">
-        <li *ngFor="let i of list_imgs">
-            <a class="rig-cell" href="#">
-                <img class="rig-img" [src]="i.link">
-                <span class="rig-overlay"></span>
-                <span class="rig-text">Lorem Ipsum Dolor</span>
-            </a>
-        </li>
-    </ul>
+    <div>
+        <ul id="rig">
+            <li *ngFor="let i of list_imgs">
+                <a class="rig-cell" href="#">
+                    <img class="rig-img" [src]="i.link">
+                    <span class="rig-overlay"></span>
+                    <span class="rig-text">Lorem Ipsum Dolor</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="contact-link-box">
+        <div>
+            <p class="text-white">Ban muon luu lai nhung khoanh khac dep cho rieng minh ?</p>
+            <button type="button" class="btn btn-outline-secondary contact-button mt-3">Lien He Chung Toi</button>
+        </div>
+    </div>
 </div>

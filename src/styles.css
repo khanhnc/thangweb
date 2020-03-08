@@ -34,3 +34,12 @@ body {
 .letter-space {
   letter-spacing: .25em;
 }
+
+
+.text-white {
+  color: #929292 !important;
+}
+
+.text-black {
+  color: black;
+}
