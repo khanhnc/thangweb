@@ -10,11 +10,15 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ServiceComponent } from './service/service.component';
 import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
-const routes : Routes = [
-  {path:'', component: HomeComponent},
-  {path:'gallery', component:GalleryComponent },
-  {path:'contact', component:ContactComponent },
-  {path:'service', component:ServiceComponent }
+import { ServiceChgColorDirective } from './service/service-chg-color.directive';
+import { WhyusComponent } from './whyus/whyus.component';
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'service', component: ServiceComponent },
+  { path: 'about', component: AboutComponent },
+
 ]
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ const routes : Routes = [
     AboutComponent,
     GalleryComponent,
     ServiceComponent,
-    ContactComponent
+    ContactComponent,
+    ServiceChgColorDirective,
+    WhyusComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

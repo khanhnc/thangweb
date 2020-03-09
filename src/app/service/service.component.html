@@ -4,8 +4,8 @@
     <p>Time Photo cung cấp đầy đủ các dịch vụ liên quan đến chụp và chỉnh sửa ảnh.</p>
     <div class="service-box pt-5">
         <div class="row">
-            <div class="col-sm service-col" #photograph (click)="currentContent = 'photograph'">
-                <div class="service-col-logo" [ngClass]="{'text-black': currentContent == 'photograph'}">
+            <div class="col-sm service-col" #photograph >
+                <div class="service-col-logo"  (click)="currentContent = 'photograph'" [ngClass]="{'text-black': currentContent == 'photograph'}">
                     <i class="fa fa-camera fa-3x"></i>
                     <h5 class="letter-space pt-2">CHỤP HÌNH</h5>
                 </div>

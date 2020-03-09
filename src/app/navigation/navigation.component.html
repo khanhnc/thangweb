@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky" #navbar>
-    <a class="navbar-brand" href="/" page>
-        <i class="fa fa-camera"></i></a>
+    <a class="navbar-brand"  pageScroll href="#home">
+        <span class="page-logo">Time Photo</span>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,18 +10,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" routerLinkActive="active" href="#">GIOI THIEU</a>
+                <a class="nav-link" pageScroll href="#about" routerLinkActive="active"  routerLink="about">GIỚI THIỆU</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" pageScroll routerLinkActive="active" href="#gallery" routerLink="gallery"><span
-                        class="font-weight-bold">GOC ANH</span></a>
+                        class="font-weight-bold">ẢNH</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLinkActive="active" href="#">DICH VU</a>
+                <a class="nav-link" pageScroll href="#service" routerLinkActive="active" routerLink="service">DỊCH VỤ</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" pageScroll routerLinkActive="active" href="#contact" routerLink="contact"><span
-                        class="font-weight-bold">LIEN HE</span></a>
+                        class="font-weight-bold">LIÊN HỆ</span></a>
             </li>
 
         </ul>
@@ -28,7 +29,7 @@
     <div>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item text-light">
-               <div> <i class="fa fa-phone fa-2x header-icon"></i>  0912345678</div>
+                <div> <i class="fa fa-phone fa-2x header-icon"></i>(+84) 983 31 5310</div>
             </li>
         </ul>
     </div>

@@ -38,3 +38,23 @@
 h3 {
     color: black;
 }
+
+.img-container {
+    position: relative;
+}
+
+.img-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: whitesmoke;
+}
+
+.img-container:hover .img-overlay {
+    opacity: .6;
+}

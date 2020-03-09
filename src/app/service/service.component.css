@@ -6,16 +6,16 @@ p {
     margin: 0;
 }
 
-
 .service-content {
     text-align: center;
+    height: 20vh;
 }
 
 .service-col-logo {
     display: inline-block;
 }
+
 .service-col-logo:hover {
     color: black;
     cursor: pointer;
 }
-
