@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
@@ -12,6 +11,11 @@ import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ServiceChgColorDirective } from './service/service-chg-color.directive';
 import { WhyusComponent } from './whyus/whyus.component';
+
+
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faBookOpen, faLightbulb, faHandshake, faHeart, faChartBar, faComments, faSmileWink } from '@fortawesome/free-solid-svg-icons';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'gallery', component: GalleryComponent },
@@ -36,8 +40,14 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     NgxPageScrollModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faBookOpen, faLightbulb, faHandshake, faComments, faSmileWink, faHeart, faChartBar);
+  }
+}

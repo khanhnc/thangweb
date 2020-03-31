@@ -1,22 +1,37 @@
 <div class="gallery-container">
     <div class="pb-5">
         <h3 class="header-typo letter-space">ẢNH</h3>
-        <p class="pb-3 pt-3">Nhung buc anh chon loc duoc chung toi ghi lai bang .... </p>
+        <p class="pb-3 pt-3">Những bức ảnh được chúng tôi ghi lại bằng sự đam mê và niềm tin của các bạn. </p>
     </div>
     <div>
         <ul id="rig">
-            <li *ngFor="let i of list_imgs">
-                <a class="rig-cell" href="#">
-                    <img class="rig-img" [src]="i.link">
-                    <span class="rig-overlay"></span>
-                </a>
-            </li>
+            <li *ngFor="let i of list_imgs; let index = index"> <a class="rig-cell" (click)="openImgDialog(index)">
+                    <img class="rig-img" [src]="i.link"> <span class="rig-overlay"></span> </a> </li>
         </ul>
     </div>
-    <div class="contact-link-box">
-        <div class="pt-5 pb-5">
-            <p class="text-white">Bạn muốn lưu lại khoảnh khắc đẹp  trong đời ?</p>
-            <button type="button" class="btn btn-outline-secondary contact-button mt-3" pageScroll href ="#contact">Liên Hệ</button>
+</div>
+<div class="modal fade" id="imgModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header"> <button type="button" class="close text-white" data-dismiss="modal"
+                    aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+            <div class="modal-body">
+                <div class="carousel-container">
+                    <div id="carouselIndicators" class="carousel slide bg-black" data-ride="carousel"
+                        [data-keyboard]="True">
+                        <!-- <ol class="carousel-indicators">               <li data-target="#carouselIndicators" *ngFor="let img of list_imgs; let index = index"                 [data-slide-to]="index"></li>             </ol> -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item" *ngFor="let img of list_imgs; let index = index"
+                                [ngClass]="{'active': index ===0}"> <img class="d-block w-100" [src]="img.link">
+                            </div>
+                        </div> <a class="carousel-control-prev" role="button" data-slide="prev" (click)="back()">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a> <a
+                            class="carousel-control-next" role="button" data-slide="next" (click)="next()"> <span
+                                class="carousel-control-next-icon" aria-hidden="true"></span> </a>
+                    </div>
+                    <!-- <div class="carousel-nav">               <img class="thumnail" src="assets/images/gallery/gallery1.jpg" alt="First slide" style="width:150px">             </div> -->
+                </div>
+            </div>
         </div>
     </div>
 </div>

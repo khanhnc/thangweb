@@ -8,10 +8,11 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'studio';
+  constructor(@Inject(DOCUMENT) document) {
+    setTimeout(() => {
+      document.getElementById('nb-global-spinner').style.display = 'none';
 
-  constructor() {
-    
+    }, 2000);
   }
 
   ngOnInit(): void {

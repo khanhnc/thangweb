@@ -1,35 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky" #navbar>
-    <a class="navbar-brand"  pageScroll href="#home">
-        <span class="page-logo">Time Photo</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
+<nav class="navbar navbar-expand-lg navbar-dark sticky" #navbar> <a class="navbar-brand" (click)="scrollTo('home')"
+        #home> <span class="page-logo">Time-Photos</span> </a> <button class="navbar-toggler" type="button"
+        data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <a class="nav-link" pageScroll href="#about" routerLinkActive="active"  routerLink="about">GIỚI THIỆU</a>
+            <li class="nav-item"> <a class="nav-link" (click)="scrollTo('about')" #about
+                    [ngClass]="{'text-white': activeNavItem === 'about'}"><span class="font-weight-bold">GIỚI
+                        THIỆU</span></a> </li>
+            <li class="nav-item"> <a class="nav-link" (click)="scrollTo('gallery')" #gallery
+                    [ngClass]="{'text-white': activeNavItem === 'gallery'}"><span
+                        class="font-weight-bold">ẢNH</span></a> </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="navbarDropdown"
+                    data-toggle="dropdown" aria-expanded="false" (click)="scrollTo('service')" #service
+                    [ngClass]="{'text-white': activeNavItem === 'service'}"><span class="font-weight-bold">DỊCH
+                        VỤ</span></a>
+                <div class="dropdown-menu"> <a class="dropdown-item" href="#">CHỤP HÌNH - QUAY PHIM</a> <a
+                        class="dropdown-item" href="#">THIỆP CƯỚI</a> </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" pageScroll routerLinkActive="active" href="#gallery" routerLink="gallery"><span
-                        class="font-weight-bold">ẢNH</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" pageScroll href="#service" routerLinkActive="active" routerLink="service">DỊCH VỤ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" pageScroll routerLinkActive="active" href="#contact" routerLink="contact"><span
-                        class="font-weight-bold">LIÊN HỆ</span></a>
-            </li>
-
+            <li class="nav-item"> <a class="nav-link" (click)="scrollTo('contact')" #contact
+                    [ngClass]="{'text-white': activeNavItem === 'contact'}"><span class="font-weight-bold">LIÊN
+                        HỆ</span></a> </li>
         </ul>
     </div>
     <div>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item text-light">
-                <div> <i class="fa fa-phone fa-2x header-icon"></i>(+84) 983 31 5310</div>
+                <fa-icon [icon]="faPhone" class="header-icon"></fa-icon> (+84) 983 31 5310
             </li>
         </ul>
     </div>

@@ -10,3 +10,7 @@ p {
 .service-col-logo {
     width: 100%;
 }
+
+.text-justify {
+    text-align: justify;
+}

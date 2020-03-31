@@ -1,12 +1,12 @@
 .gallery-container {
     max-height: 50%;
     margin-bottom: 20px;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 50px 0;
 }
+
 .gallery-container {
     text-align: center;
 }
-
 
 .bg-red {
     background-color: red;
@@ -62,7 +62,7 @@ h3 {
     display: inline-block;
     *display: inline;
     /*for IE6 - IE7*/
-    width: 25%;
+    width: 33.33%;
     vertical-align: middle;
     box-sizing: border-box;
     margin: 0;
@@ -145,24 +145,6 @@ h3 {
     opacity: 0.9;
 }
 
-@media (max-width: 9000px) {
-    #rig li {
-        width: 25%;
-    }
-}
-
-@media (max-width: 700px) {
-    #rig li {
-        width: 33.33%;
-    }
-}
-
-@media (max-width: 550px) {
-    #rig li {
-        width: 50%;
-    }
-}
-
 .contact-link-box {
     vertical-align: middle;
     display: flex;
@@ -181,4 +163,82 @@ h3 {
 
 .contact-button:hover {
     background-color: gray;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+        max-width: 100%;
+    }
+    .modal-sm {
+        width: 600px;
+    }
+    .carousel-container {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .modal-dialog {
+        max-width: 100%;
+    }
+    #rig li {
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .modal-lg {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .modal-body {
+        padding: 0;
+    }
+    #rig li {
+        width: 50%;
+    }
+}
+
+.carousel-container {
+    margin: auto;
+    padding: 0 0 56px 0;
+}
+
+.carousel-item {
+    height: auto;
+    min-height: 0;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-content {
+    background-color: black;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+}
+
+.thumnail {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.carousel-control-prev:hover {
+    background-color: #0606064a;
+}
+
+.carousel-control-next:hover {
+    background-color: #0606064a;
 }

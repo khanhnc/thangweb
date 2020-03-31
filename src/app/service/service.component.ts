@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faCamera, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-service',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
-  currentContent ="photograph";
+  currentContent = "photograph";
+  faCamera = faCamera;
+  faVideo = faVideo;
   constructor() { }
 
   ngOnInit(): void {

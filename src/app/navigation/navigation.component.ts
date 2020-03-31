@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
-import { PageScrollService } from 'ngx-page-scroll-core';
+import { PageScrollService, PageScrollInstance } from 'ngx-page-scroll-core';
 import { DOCUMENT } from '@angular/common';
+import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-navigation',
@@ -9,9 +11,37 @@ import { DOCUMENT } from '@angular/common';
 })
 export class NavigationComponent implements OnInit {
   @ViewChild('navbar') navbar: ElementRef;
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) { }
+  @ViewChild('home') home: ElementRef;
+  @ViewChild('about') about: ElementRef;
+  @ViewChild('service') service: ElementRef;
+  @ViewChild('gallery') gallery: ElementRef;
+  @ViewChild('contact') contact: ElementRef;
+
+  activeNavItem = 'home';
+  pageScrollInstance: PageScrollInstance;
+  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+    // this.pageScrollService.stop.subscribe(ins => {
+    //   console.log(ins)
+    // })
+  }
+
+  faPhone = faPhoneAlt;
 
   ngOnInit(): void {
+    // window.addEventListener('scroll', function() {
+    //   var element = document.querySelector('#about');
+    //   var position = element.getBoundingClientRect();
+    
+    //   // checking whether fully visible
+    //   if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    //     console.log('yahoo', window.innerHeight, position.top, position.bottom);
+    //   }
+    
+    //   // checking for partial visibility
+    //   if(position.top < window.innerHeight && position.bottom >= 0) {
+    //     console.log('No', window.innerHeight, position.top, position.bottom);
+    //   }
+    // });
     window.onscroll = () => {
       if (window.scrollY > 50) {
         this.navbar.nativeElement.classList.add("bg-dark");
@@ -20,4 +50,43 @@ export class NavigationComponent implements OnInit {
       }
     };
   }
+  public scrollTo(id) {
+    this.pageScrollInstance = this.pageScrollService.create({
+      document: this.document,
+      scrollTarget: `#` + id,
+      easingLogic: this.easing
+    }
+    )
+    this.pageScrollService.start(this.pageScrollInstance);
+    this.activeNavItem = id;
+    // console.log( 
+    //   this.pageScrollInstance.getCurrentOffset()
+    //   )
+  }
+
+
+  public easing = (t: number, b: number, c: number, d: number): number => {
+    if (t === 0) {
+      return b;
+    }
+    if (t === d) {
+      return b + c;
+    }
+    if ((t /= d / 2) < 1) {
+      return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+    }
+
+    return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+  }
+
+  //  isInViewport = function (position) {
+  //   if(position.top >= 0 && position.bottom <= window.innerHeight) {
+  //     console.log('Element is fully visible in screen');
+  //   }
+  
+  //   // checking for partial visibility
+  //   if(position.top < window.innerHeight && position.bottom >= 0) {
+  //     console.log('Element is partially visible in screen');
+  //   }
+// };
 }

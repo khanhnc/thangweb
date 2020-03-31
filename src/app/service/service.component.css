@@ -8,7 +8,6 @@ p {
 
 .service-content {
     text-align: center;
-    height: 20vh;
 }
 
 .service-col-logo {
@@ -18,4 +17,8 @@ p {
 .service-col-logo:hover {
     color: black;
     cursor: pointer;
+}
+
+.service-container {
+    padding: 100px 0 50px 0;
 }

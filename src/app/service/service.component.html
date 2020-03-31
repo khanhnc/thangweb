@@ -1,63 +1,41 @@
-<div class="container service-container pt-5 pb-5">
+<div class="container service-container">
     <h3 class="header-typo letter-space text-black pb-3">DỊCH VỤ</h3>
-    <p>Với sự nhiệt huyết Time Photo cam kết mang đến cho bạn sự hài lòng khi sử dụng dịch vụ của Time Photo</p>
-    <p>Time Photo cung cấp đầy đủ các dịch vụ liên quan đến chụp và chỉnh sửa ảnh.</p>
+    <blockquote class="blockquote text-center">
+        <p class="mb-0 text-italic">Những khách hàng khó tính nhất chính là nguồn học vĩ đại nhất của bạn.</p>
+        <footer class="blockquote-footer text-italic">Bill Gates <cite title="Source Title"></cite></footer>
+    </blockquote>
     <div class="service-box pt-5">
         <div class="row">
-            <div class="col-sm service-col" #photograph >
-                <div class="service-col-logo"  (click)="currentContent = 'photograph'" [ngClass]="{'text-black': currentContent == 'photograph'}">
-                    <i class="fa fa-camera fa-3x"></i>
+            <div class="col-sm service-col" #photograph>
+                <div class="service-col-logo" (click)="currentContent = 'photograph'"
+                    [ngClass]="{'text-black': currentContent == 'photograph'}">
+                    <fa-icon [icon]="faCamera" class="fa-3x"></fa-icon>
                     <h5 class="letter-space pt-2">CHỤP HÌNH</h5>
                 </div>
             </div>
             <div class="col-sm service-col" #setting>
                 <div class="service-col-logo" (click)="currentContent = 'setting'"
                     [ngClass]="{'text-black': currentContent == 'setting'}">
-                    <i class="fa fa-cogs fa-3x"></i>
-                    <h5 class="letter-space pt-2">
-                        CHỈNH SỬA ẢNH</h5>
+                    <fa-icon [icon]="faVideo" class="fa-3x"></fa-icon>
+                    <h5 class="letter-space pt-2"> QUAY PHIM</h5>
                 </div>
             </div>
             <div class="col-sm service-col" #invitation>
                 <div class="service-col-logo" (click)="currentContent = 'invitation'"
                     [ngClass]="{'text-black': currentContent == 'invitation'}">
-                    <i class="fa fa-file fa-3x"></i>
+                    <fa-icon [icon]="['fas', 'book-open']" class="fa-3x"></fa-icon>
                     <h5 class="letter-space pt-2">THIỆP CƯỚI</h5>
                 </div>
             </div>
         </div>
-
         <div class="service-content pt-5">
-            <div class="test" *ngIf="currentContent == 'photograph'">
-                <p> CH</p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
-            </div>
-            <div class="test"  *ngIf="currentContent == 'setting'">
-                <p> CHS</p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
-                Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
-                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-                Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
-                theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-                sit amet..", comes from a line in section 1.10.32.
-            </div>
-            <div class="test"  *ngIf="currentContent == 'invitation'">
-                <p> TC</p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-                search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-                evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </div>
+            <div class="test" *ngIf="currentContent == 'photograph'"> Chúng tôi cung cấp các dịch vụ chụp ảnh cưới,
+                ảnh gia đình, ảnh kỷ yếu, ảnh thẻ.... Những gói dịch vụ tương ứng với mức giá phù hợp. Mọi thông tin chi
+                tiết về các gói dịch vụ các bạn có thể xem ở phần <a href="#">Dịch Vụ Chụp Hình</a> </div>
+            <div class="test" *ngIf="currentContent == 'setting'"> Quay phim - chụp hình Lễ Thành hôn, lễ vu quy, sự kiện <a href="#">Dịch Vụ Quay Phim</a>  </div>
+            <div class="test" *ngIf="currentContent == 'invitation'"> Chúng tôi nhận làm thiệp cưới với nhiều mẫu
+                thiệp có sẵn cũng như những mẫu thiệp được thiết kế theo ý nguyện của khách hàng. Danh sách các mẫu
+                thiệp và giá cả các bạn có thể tham khảo ở phần <a href="#">Thiệp Cưới</a> </div>
         </div>
     </div>
 </div>

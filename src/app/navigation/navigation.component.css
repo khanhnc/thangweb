@@ -2,7 +2,7 @@
     position: fixed !important;
     top: 0 !important;
     width: 100%;
-z-index: 1;
+    z-index: 1;
 }
 
 .navbar {
@@ -20,7 +20,26 @@ z-index: 1;
     background-color: black !important;
 }
 
-.header-icon {
-    text-align: center;
-    vertical-align: middle;
+a:hover {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    transition: visibility 0s, opacity 0.5s linear;
+    margin: 0;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: white;
+    transition: color 0.25s linear; /* vendorless fallback */
+    -o-transition: color 0.25s linear; /* opera */
+    -ms-transition: color 0.25s linear; /* IE 10 */
+    -moz-transition: color 0.25s linear; /* Firefox */
+    -webkit-transition: color 0.25s linear; /*safari and chrome */
+    background-color: black;
 }
