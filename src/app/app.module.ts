@@ -8,20 +8,18 @@ import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ServiceComponent } from './service/service.component';
 import { ContactComponent } from './contact/contact.component';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ActivatedRoute } from '@angular/router';
 import { ServiceChgColorDirective } from './service/service-chg-color.directive';
 import { WhyusComponent } from './whyus/whyus.component';
 
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faBookOpen, faLightbulb, faHandshake, faHeart, faChartBar, faComments, faSmileWink } from '@fortawesome/free-solid-svg-icons';
+import { Route } from '@angular/compiler/src/core';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'gallery', component: GalleryComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'service', component: ServiceComponent },
-  { path: 'about', component: AboutComponent },
+  { path: "**", redirectTo: "/" }
 
 ]
 @NgModule({
@@ -46,8 +44,12 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
-
-  constructor(private library: FaIconLibrary) {
+  constructor(private library: FaIconLibrary, private route: ActivatedRoute) {
     library.addIcons(faBookOpen, faLightbulb, faHandshake, faComments, faSmileWink, faHeart, faChartBar);
+    console.log(this.route.snapshot)
+    if (this.route.snapshot.queryParams['fbclid']) {
+      console.log("true")
+      //do your stuff. example: console.log('id: ', this.route.snapshot.queryParams['id']);
+ }
   }
 }

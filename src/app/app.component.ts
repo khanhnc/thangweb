@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import { PageScrollService } from 'ngx-page-scroll-core';
 import { DOCUMENT } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,11 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(@Inject(DOCUMENT) document) {
+  constructor(@Inject(DOCUMENT) document, private route: ActivatedRoute) {
+
+    console.log(this.route.snapshot)
     setTimeout(() => {
       document.getElementById('nb-global-spinner').style.display = 'none';
-
     }, 2000);
   }
 
