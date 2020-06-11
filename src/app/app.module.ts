@@ -18,6 +18,7 @@ import { faBookOpen, faLightbulb, faHandshake, faHeart, faChartBar, faComments, 
 import { Route } from '@angular/compiler/src/core';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToggleSideNav } from './navigation/toggleSideNav.service';
+import { NavContent } from './navigation/nav-content.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,7 +36,8 @@ const routes: Routes = [
     ContactComponent,
     ServiceChgColorDirective,
     WhyusComponent,
-    SideNavComponent
+    SideNavComponent,
+    NavContent,
   ],
   imports: [
     RouterModule.forRoot(routes),
