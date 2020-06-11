@@ -10,12 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 export class AppComponent {
   constructor(@Inject(DOCUMENT) document, private route: ActivatedRoute) {
 
-    console.log(this.route.snapshot)
-    setTimeout(() => {
-      document.getElementById('nb-global-spinner').style.display = 'none';
-    }, 2000);
+    // window.addEventListener('load', function () {
+    //   alert("It's loaded!")
+    // })
+    // console.log(this.route.snapshot)
+    // setTimeout(() => {
+    //   document.getElementById('nb-global-spinner').style.display = 'none';
+    // }, 2000);
   }
 
-  ngOnInit(): void {
-  }
 }

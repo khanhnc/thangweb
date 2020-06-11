@@ -1,7 +1,9 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, Output } from '@angular/core';
 import { PageScrollService, PageScrollInstance } from 'ngx-page-scroll-core';
 import { DOCUMENT } from '@angular/common';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { EventEmitter } from 'protractor';
+import { ToggleSideNav } from './toggleSideNav.service';
 
 
 @Component({
@@ -10,6 +12,7 @@ import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+
   @ViewChild('navbar') navbar: ElementRef;
   @ViewChild('home') home: ElementRef;
   @ViewChild('about') about: ElementRef;
@@ -19,7 +22,8 @@ export class NavigationComponent implements OnInit {
 
   activeNavItem = 'home';
   pageScrollInstance: PageScrollInstance;
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+
+  constructor(private toogleSideNavService: ToggleSideNav, private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
     // this.pageScrollService.stop.subscribe(ins => {
     //   console.log(ins)
     // })
@@ -31,24 +35,24 @@ export class NavigationComponent implements OnInit {
     // window.addEventListener('scroll', function() {
     //   var element = document.querySelector('#about');
     //   var position = element.getBoundingClientRect();
-    
+
     //   // checking whether fully visible
     //   if(position.top >= 0 && position.bottom <= window.innerHeight) {
     //     console.log('yahoo', window.innerHeight, position.top, position.bottom);
     //   }
-    
+
     //   // checking for partial visibility
     //   if(position.top < window.innerHeight && position.bottom >= 0) {
     //     console.log('No', window.innerHeight, position.top, position.bottom);
     //   }
     // });
-    window.onscroll = () => {
-      if (window.scrollY > 50) {
-        this.navbar.nativeElement.classList.add("bg-dark");
-      } else {
-        this.navbar.nativeElement.classList.remove("bg-dark");
-      }
-    };
+    // window.onscroll = () => {
+    //   if (window.scrollY > 50) {
+    //     this.navbar.nativeElement.classList.add("bg-dark");
+    //   } else {
+    //     this.navbar.nativeElement.classList.remove("bg-dark");
+    //   }
+    // };
   }
   public scrollTo(id) {
     this.pageScrollInstance = this.pageScrollService.create({
@@ -62,6 +66,10 @@ export class NavigationComponent implements OnInit {
     // console.log( 
     //   this.pageScrollInstance.getCurrentOffset()
     //   )
+  }
+
+  openSideNav() {
+    this.toogleSideNavService.toggleSideNav.emit();
   }
 
 
@@ -83,10 +91,10 @@ export class NavigationComponent implements OnInit {
   //   if(position.top >= 0 && position.bottom <= window.innerHeight) {
   //     console.log('Element is fully visible in screen');
   //   }
-  
+
   //   // checking for partial visibility
   //   if(position.top < window.innerHeight && position.bottom >= 0) {
   //     console.log('Element is partially visible in screen');
   //   }
-// };
+  // };
 }

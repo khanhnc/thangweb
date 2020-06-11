@@ -16,6 +16,8 @@ import { WhyusComponent } from './whyus/whyus.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faBookOpen, faLightbulb, faHandshake, faHeart, faChartBar, faComments, faSmileWink } from '@fortawesome/free-solid-svg-icons';
 import { Route } from '@angular/compiler/src/core';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { ToggleSideNav } from './navigation/toggleSideNav.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,7 +34,8 @@ const routes: Routes = [
     ServiceComponent,
     ContactComponent,
     ServiceChgColorDirective,
-    WhyusComponent
+    WhyusComponent,
+    SideNavComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -40,7 +43,7 @@ const routes: Routes = [
     NgxPageScrollModule,
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [ToggleSideNav],
   bootstrap: [AppComponent]
 })
 export class AppModule {
