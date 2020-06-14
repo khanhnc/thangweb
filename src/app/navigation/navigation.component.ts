@@ -1,8 +1,7 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef, Output } from '@angular/core';
 import { PageScrollService, PageScrollInstance } from 'ngx-page-scroll-core';
 import { DOCUMENT } from '@angular/common';
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { EventEmitter } from 'protractor';
+import { faPhoneAlt, faSortDown } from '@fortawesome/free-solid-svg-icons';
 import { ToggleSideNav } from './toggleSideNav.service';
 
 
@@ -30,6 +29,7 @@ export class NavigationComponent implements OnInit {
   }
 
   faPhone = faPhoneAlt;
+  faSortDown = faSortDown;
 
   ngOnInit(): void {
     // window.addEventListener('scroll', function() {

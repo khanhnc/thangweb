@@ -11,11 +11,11 @@ import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule, ActivatedRoute } from '@angular/router';
 import { ServiceChgColorDirective } from './service/service-chg-color.directive';
 import { WhyusComponent } from './whyus/whyus.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faBookOpen, faLightbulb, faHandshake, faHeart, faChartBar, faComments, faSmileWink } from '@fortawesome/free-solid-svg-icons';
-import { Route } from '@angular/compiler/src/core';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToggleSideNav } from './navigation/toggleSideNav.service';
 import { NavContent } from './navigation/nav-content.component';
@@ -42,6 +42,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
+    BrowserAnimationsModule,
     NgxPageScrollModule,
     FontAwesomeModule,
   ],

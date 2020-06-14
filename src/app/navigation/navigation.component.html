@@ -1,15 +1,40 @@
-<nav class="navbar  navbar-expand-lg navbar-light bg-light " #navbar> <a class="navbar-brand" 
-        > <span class="page-logo">Time-Photos</span> </a> <button class="navbar-toggler" type="button"
-        (click) ="openSideNav()"
-        aria-expanded="false"> <span class="navbar-toggler-icon"></span> </button>
-    <div class="collapse navbar-collapse">
-       <app-nav-content></app-nav-content>
+<!-- <nav class="navbar  navbar-expand-lg navbar-light bg-light " #navbar> <a class="navbar-brand"> <span
+            class="page-logo">Time-Photos</span> </a> <button class="navbar-toggler" type="button"
+        (click)="openSideNav()"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse navbar-content">
+        <app-nav-content></app-nav-content>
     </div>
     <div>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item ">
-                <fa-icon [icon]="faPhone" class="header-icon"></fa-icon> (+84) 983 31 5310
+                <fa-icon [icon]="faPhone" class="header-icon"></fa-icon> 0983 315 310
             </li>
         </ul>
     </div>
-</nav>
+</nav> -->
+
+<div class="topNavbar">
+    <div class="logo">
+        <span>Time Photos</span>
+    </div>
+    <div class="navbar-content">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+            <a href="#contact">Contact
+            <fa-icon  class="dropdown-icon" [icon]="faSortDown"></fa-icon> 
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar-pull-left">
+        <fa-icon [icon]="faPhone" class="header-icon"></fa-icon> 0983 315 310
+    </div>
+
+</div>

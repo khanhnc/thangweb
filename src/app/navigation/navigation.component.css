@@ -25,7 +25,24 @@ a:hover {
     cursor: pointer;
 }
 
-.dropdown-menu {
+/* 
+.navbar-content {
+    justify-content: center;
+} */
+
+#menu #list {
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    background: #d5d5d5;
+}
+
+#menu:hover #list {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
+
+/* .dropdown-menu {
     border-radius: 0;
 }
 
@@ -33,14 +50,74 @@ a:hover {
     display: block;
     transition: visibility 0s, opacity 0.5s linear;
     margin: 0;
+} */
+
+/* .dropdown-item:focus, .dropdown-item:hover {
+    color: white;
+    transition: color 0.25s linear; 
+    -o-transition: color 0.25s linear;
+    -ms-transition: color 0.25s linear;
+    -moz-transition: color 0.25s linear;
+    -webkit-transition: color 0.25s linear;
+    background-color: black;
+} */
+
+.topNavbar {
+    background-color: whitesmoke;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100px;
+    line-height: 100px;
+    display: flex;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
-.dropdown-item:focus, .dropdown-item:hover {
-    color: white;
-    transition: color 0.25s linear; /* vendorless fallback */
-    -o-transition: color 0.25s linear; /* opera */
-    -ms-transition: color 0.25s linear; /* IE 10 */
-    -moz-transition: color 0.25s linear; /* Firefox */
-    -webkit-transition: color 0.25s linear; /*safari and chrome */
-    background-color: black;
+.logo {
+    width: 100px;
+    text-align: center;
+}
+
+.navbar-content {
+    line-height: 52px;
+    display: flex;
+    margin: auto;
+}
+
+.navbar-content a {
+    padding: 0 20px;
+    color: #777777;
+}
+
+.navbar-content a:hover {
+    text-decoration: unset;
+    background-color: #212121;
+    color: #fafafa;
+    transition: color 0.25s linear;
+    -o-transition: color 0.25s linear;
+    -ms-transition: color 0.25s linear;
+    -moz-transition: color 0.25s linear;
+    -webkit-transition: color 0.25s linear;
+}
+
+.dropdown a {
+    display: block;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: block;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin: 0 -20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    animation: fade 1.5s infinite 100ms;
 }
