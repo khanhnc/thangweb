@@ -1,21 +1,15 @@
-<ul class="navbar-nav" >
-    <li class="nav-item"> <a class="nav-link"><span class="font-weight-bold">GIỚI
-                THIỆU</span></a> </li>
-
-                <li class="nav-item dropdown"   (click)="toggleDropDown()">
-                    <a class="nav-link dropdown-toggle"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ẢNH
-                    </a>
-                    <div class="dropdown-menu" [@toggleOpen]="isOpen" >
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-    
-    <li class="nav-item"> <a class="nav-link" 
-            ><span class="font-weight-bold">LIÊN
-                HỆ</span></a> </li>
-
-</ul>
+<div class="navbar-content">
+  <a href="#home" class="navbar-item">Home</a>
+  <a href="#news" class="navbar-item">News</a>
+  <a href="#contact" class="navbar-item">Contact</a>
+  <div class="dropdown">
+      <a href="#contact" class="navbar-item">Contact
+          <fa-icon class="dropdown-icon" [icon]="faSortDown"></fa-icon>
+          <div class="dropdown-content">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+      </a>
+  </div>
+</div>

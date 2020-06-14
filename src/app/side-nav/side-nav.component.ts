@@ -9,21 +9,21 @@ import { DOCUMENT } from '@angular/common';
 })
 export class SideNavComponent implements OnInit {
 
-  @ViewChild('sideNav') sideNav : ElementRef;
+  @ViewChild('sideNav') sideNav: ElementRef;
 
   constructor(private toggleSideNavService: ToggleSideNav) { }
 
   ngOnInit(): void {
-    this.toggleSideNavService.toggleSideNav.subscribe(() => {
-        this.openSideNav();
-    })
+    this.toggleSideNavService.openSideNav.subscribe(() => this.openSideNav());
+    this.toggleSideNavService.closeSideNav.subscribe(() => this.closeSideNav());
+
   }
 
-  openSideNav(){
+  openSideNav() {
     this.sideNav.nativeElement.style.width = "100%";
   }
 
-  closeSideNav(){
+  closeSideNav() {
     this.sideNav.nativeElement.style.width = "0";
   }
 }
