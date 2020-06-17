@@ -19,9 +19,11 @@ import { faBookOpen, faLightbulb, faHandshake, faHeart, faChartBar, faComments, 
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToggleSideNav } from './navigation/toggleSideNav.service';
 import { NavContent } from './navigation/nav-content.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeResolver } from './home/home.resolver.service';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, resolve:{images: HomeResolver} },
   { path: "**", redirectTo: "/" }
 
 ]
@@ -43,19 +45,16 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     NgxPageScrollModule,
     FontAwesomeModule,
   ],
-  providers: [ToggleSideNav],
+  providers: [ToggleSideNav, HomeResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(private library: FaIconLibrary, private route: ActivatedRoute) {
     library.addIcons(faBookOpen, faLightbulb, faHandshake, faComments, faSmileWink, faHeart, faChartBar);
-    console.log(this.route.snapshot)
-    if (this.route.snapshot.queryParams['fbclid']) {
-      console.log("true")
-      //do your stuff. example: console.log('id: ', this.route.snapshot.queryParams['id']);
- }
+
   }
 }

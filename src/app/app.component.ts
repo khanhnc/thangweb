@@ -2,13 +2,17 @@ import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
+import { HttpClient } from '@angular/common/http';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(@Inject(DOCUMENT) document, private route: ActivatedRoute) {
+  testSrc: SafeUrl
+  constructor(@Inject(DOCUMENT) document, private route: ActivatedRoute, private http: HttpClient, private sanitizer: DomSanitizer) {
 
     // window.addEventListener('load', function () {
     //   alert("It's loaded!")
@@ -19,4 +23,8 @@ export class AppComponent {
     // }, 2000);
   }
 
+  ngOnInit() {
+  
+
+  }
 }
