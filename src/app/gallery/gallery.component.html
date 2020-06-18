@@ -18,17 +18,15 @@
             <div class="modal-body">
                 <div class="carousel-container">
                     <div id="carouselIndicators" class="carousel slide bg-black" data-ride="carousel">
-                        <!-- <ol class="carousel-indicators">               <li data-target="#carouselIndicators" *ngFor="let img of list_imgs; let index = index"                 [data-slide-to]="index"></li>             </ol> -->
                         <div class="carousel-inner">
                             <div class="carousel-item" *ngFor="let img of list_imgs; let index = index"
-                                [ngClass]="{'active': index ===0}"> <img class="d-block w-100" [src]="img.link">
+                                [ngClass]="{'active': index === 0}"> <img class="d-block w-100" [src]="img.link">
                             </div>
                         </div> <a class="carousel-control-prev" role="button" data-slide="prev" (click)="back()">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a> <a
                             class="carousel-control-next" role="button" data-slide="next" (click)="next()"> <span
                                 class="carousel-control-next-icon" aria-hidden="true"></span> </a>
                     </div>
-                    <!-- <div class="carousel-nav">               <img class="thumnail" src="assets/images/gallery/gallery1.jpg" alt="First slide" style="width:150px">             </div> -->
                 </div>
             </div>
         </div>
