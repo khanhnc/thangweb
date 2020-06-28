@@ -21,9 +21,15 @@ import { ToggleSideNav } from './navigation/toggleSideNav.service';
 import { NavContent } from './navigation/nav-content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeResolver } from './home/home.resolver.service';
+import { FooterComponent } from './footer/footer.component';
+import { HomeAboutComponent } from './home/home-about/home-about.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, resolve:{images: HomeResolver} },
+  { path: 'lienhe', component:ContactComponent },
+  { path: 'dichvu', component:ServiceComponent },
+  { path: 'gioithieu', component: AboutComponent },
+
   { path: "**", redirectTo: "/" }
 
 ]
@@ -40,6 +46,8 @@ const routes: Routes = [
     WhyusComponent,
     SideNavComponent,
     NavContent,
+    FooterComponent,
+    HomeAboutComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

@@ -35,31 +35,30 @@
     }
 }
 
-.box{
+.box {
     width: 100%;
-    height: 100%;            
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.8;  /* for demo purpose  */
+    opacity: 0.8;
+    /* for demo purpose  */
     background-color: red;
 }
 
-
-
 #carousel-example-generic {
-	height: 480px;
-	width: 848px;
+    height: 480px;
+    width: 848px;
 }
 
 .carouselTitle {
-	font-size: 64px;
-	font-weight: 100;
-	color: white;
-	text-shadow: 0 1px 2px #000;
-	position: absolute;
-	bottom: 60px;
-	left: 80px;
+    font-size: 64px;
+    font-weight: 100;
+    color: white;
+    text-shadow: 0 1px 2px #000;
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
 }
 
 .carousel-container {
@@ -71,3 +70,77 @@
     height: auto;
     min-height: 0;
 }
+
+.main-wrapper {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.19), 0 2px 5px rgba(0, 0, 0, 0.23)
+}
+
+.carousel-control-next, .carousel-control-prev {
+    transition: background-color 0.25s ease;
+    transition: color 0.25s ease;
+    color: white;
+    /* left: 5px; */
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    border-color: white;
+    border-style: solid;
+    border-width: .5px .5px .5px 0;
+}
+
+.carousel-control-next {
+    border-color: white;
+    border-style: solid;
+    border-width: .5px 0 .5px .5px;
+}
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    background-color: white;
+    color: black;
+}
+
+.ad-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 400px;
+}
+.ad-text h1 {
+    color: white;
+}
+.ad-text a {
+    color: black;
+    border-radius: 0;
+}
+
+.carousel-img {
+height: 70vh;
+    background-position-x: 60%;
+    background-size:  cover;
+
+}
+/* 
+
+
+background-image: url(blob:http://localhost:4200/a2930dc9-3ead-438c-a54a-9e0c1b34e651);
+}
+
+img[_ngcontent-sue-c28] {
+    background-position: right center;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+}
+.w-100 {
+    width: 100%!important;
+}
+.d-block {
+    display: block!important;
+}
+img {
+    vertical-align: middle;
+    border-style: none; */
