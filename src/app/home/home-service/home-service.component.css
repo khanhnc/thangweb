@@ -22,3 +22,11 @@
     height: 400px;
     background-image: url('/assets/images/home-service/portrait.jpg');
 }
+.more-button {
+    border-radius: 0;
+    color: white;
+}
+
+.more-button:hover {
+    color: white;
+}

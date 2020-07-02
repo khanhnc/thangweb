@@ -1,4 +1,4 @@
-import { Component, Inject, NgZone, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, Inject, NgZone, Renderer2, ViewChild, ElementRef, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { ActivatedRoute, Router, RouterEvent, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
 
@@ -35,4 +35,13 @@ export class AppComponent {
       this.loading = false
     }
   }
+
+
+  @HostListener('window:scroll') onScroll(e: Event): void {
+    console.log(this.getYPosition(e));
+ }
+
+ getYPosition(e: Event): number {
+  return (e.target as Element).scrollTop;
+}
 }

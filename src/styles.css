@@ -6,17 +6,12 @@ body {
   margin: auto;
   background-color: whitesmoke;
   font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: #777777;
 }
 
 a:hover {
   text-decoration: none;
-  color: #777777;
 }
 
 .carousel-item {
