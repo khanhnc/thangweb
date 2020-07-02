@@ -1,3 +1,24 @@
-.home-service-container{
+.home-service-container {
     width: 80%;
+    padding: 100px 0;
+}
+
+.home-service-img {
+    background-position: center;
+    background-size: cover;
+}
+
+.child {
+    height: 300px;
+    background-image: url('/assets/images/home-service/baby.jpg');
+}
+
+.wedd {
+    height: 300px;
+    background-image: url('/assets/images/home-service/wedd.jpg');
+}
+
+.portrait {
+    height: 400px;
+    background-image: url('/assets/images/home-service/portrait.jpg');
 }
