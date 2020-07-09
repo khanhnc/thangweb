@@ -14,28 +14,6 @@ a:hover {
   text-decoration: none;
 }
 
-.carousel-item {
-  height: 100vh;
-  min-height: 350px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.page-logo {
-  font-family: 'Great Vibes', Arial, cursive;
-}
-
-.padding-0 {
-  padding: 0 !important;
-}
-
-.header-typo {
-  font-family: 'DosisRegular', Arial, cursive;
-}
-
 .letter-space {
   letter-spacing: .25em;
 }

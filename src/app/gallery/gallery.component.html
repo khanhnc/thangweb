@@ -1,34 +1,69 @@
 <div class="gallery-container">
-    <div class="pb-5">
-        <h3 class="header-typo letter-space">ẢNH</h3>
-        <p class="pb-3 pt-3">Những bức ảnh được chúng tôi ghi lại bằng sự đam mê và niềm tin của các bạn. </p>
-    </div>
-    <div>
-        <ul id="rig">
-            <li *ngFor="let i of list_imgs; let index = index"> <a class="rig-cell" (click)="openImgDialog(index)">
-                    <img class="rig-img" [src]="i.link"> <span class="rig-overlay"></span> </a> </li>
-        </ul>
+    <h3>ẢNH</h3>
+    <hr>
+    <div class="row">
+        <div class="column">
+            <div class="cell" (click)="openModal();currentSlide(0)">
+                <img src="assets/images/gallery/potriat3.jpg">
+                <div class="cell-overlay"> </div>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="cell" (click)="openModal();currentSlide(1)">
+                <img src="assets/images/gallery/gallery2.jpg">
+                <div class="cell-overlay"></div>
+            </div>
+            <div class="cell" (click)="openModal();currentSlide(2)">
+                <img src="assets/images/gallery/gallery3.jpg">
+                <div class="cell-overlay"></div>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="cell" (click)="openModal();currentSlide(3)">
+                <img src="assets/images/gallery/potriat2.jpg">
+                <div class="cell-overlay"></div>
+
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="cell" (click)="openModal();currentSlide(4)">
+                <img src="assets/images/gallery/gallery5.jpg">
+                <div class="cell-overlay"></div>
+
+            </div>
+            <div class="cell" (click)="openModal();currentSlide(5)">
+                <img src="assets/images/gallery/gallery6.jpg">
+                <div class="cell-overlay"></div>
+            </div>
+
+        </div>
     </div>
 </div>
+
 <div class="modal fade" id="imgModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered">
+    <button type="button" class=" close close-btn" data-dismiss="modal" aria-label="Close"> &times;
+    </button>
+    <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header"> <button type="button" class="close text-white" data-dismiss="modal"
-                    aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
             <div class="modal-body">
-                <div class="carousel-container">
-                    <div id="carouselIndicators" class="carousel slide bg-black" data-ride="carousel">
+                <div class="carousel-content">
+
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item" *ngFor="let img of list_imgs; let index = index"
-                                [ngClass]="{'active': index === 0}"> <img class="d-block w-100" [src]="img.link">
+                            <div class="carousel-item " *ngFor="let i of list_imgs; let index = index;"
+                                [ngClass]="{'active': index === 1}"> <img class="d-block" [src]="i.link">
                             </div>
-                        </div> <a class="carousel-control-prev" role="button" data-slide="prev" (click)="back()">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span> </a> <a
-                            class="carousel-control-next" role="button" data-slide="next" (click)="next()"> <span
-                                class="carousel-control-next-icon" aria-hidden="true"></span> </a>
+
+                        </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>
+
 </div>

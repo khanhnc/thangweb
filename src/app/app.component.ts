@@ -36,12 +36,4 @@ export class AppComponent {
     }
   }
 
-
-  @HostListener('window:scroll') onScroll(e: Event): void {
-    console.log(this.getYPosition(e));
- }
-
- getYPosition(e: Event): number {
-  return (e.target as Element).scrollTop;
-}
 }
