@@ -1,11 +1,9 @@
-<div class="topNavbar">
+<div class="sticky topNavbar" #navbar>
     <div class="logo">
-        <span>Time Photos</span>
+        <object data="assets/logo.svg" id="logo"></object>
+        <span class="logo-name">TIME PHOTOS</span>
     </div>
-    <app-nav-content class="navbar-content navbar-content-responsive"></app-nav-content>
-    <!-- <div class="navbar-pull-left">
-        <fa-icon [icon]="faPhone" class="header-icon"></fa-icon> 0983 315 310
-    </div> -->
+    <app-nav-content class=" navbar-content navbar-content-responsive"></app-nav-content>
     <div class="menu-button">
         <a (click)="openSideNav()">
             <fa-icon [icon]="faBars" class="header-icon" class="fa-2x"></fa-icon>

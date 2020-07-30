@@ -1,27 +1,24 @@
-.sticky {
-    position: fixed !important;
-    top: 0 !important;
-    z-index: 1;
-}
-
 a:hover {
     cursor: pointer;
 }
 
 .topNavbar {
-    background-color: whitesmoke;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100px;
-    line-height: 100px;
+    background: whitesmoke;
+    padding: 0 20px;
+    height: 80px;
+    line-height: 80px;
     display: flex;
     justify-content: space-between;
+    transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .logo {
-    width: 100px;
-    text-align: center;
+    display: flex;
 }
 
 .navbar-content {
@@ -30,25 +27,27 @@ a:hover {
     margin: auto;
 }
 
-.navbar-content a {
-    padding: 0 30px;
-    width: 150px;
+.navbar-item {
+    font-size: 18px;
+    color: black;
+    padding: 0 10px;
+    width: 125px;
     text-align: center;
 }
 
 .navbar-item:hover {
-    background-color: #212121;
-    color: #fafafa;
-    transition: color 0.25s linear;
-    -o-transition: color 0.25s linear;
-    -ms-transition: color 0.25s linear;
-    -moz-transition: color 0.25s linear;
-    -webkit-transition: color 0.25s linear;
+    background: #7986CB;
+    color: white;
+    transition: color 0.1s linear;
+    -o-transition: color 0.1s linear;
+    -ms-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    -webkit-transition: color 0.1s linear;
 }
 
 .dropdown-navbar-item:hover {
-    background-color: #9E9E9E;
-    color: black;
+    background: #7986CB;
+    color: white;
 }
 
 .dropdown a {
@@ -58,14 +57,17 @@ a:hover {
 .dropdown-content {
     position: absolute;
     display: block;
-    background-color: #f9f9f9;
-    min-width: 150px;
+    background: #f9f9f9;
+    min-width: 125px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    margin: 0 -30px;
+    margin: 0 -10px;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.25s linear;
+    transition: visibility 0s, opacity 0.1s linear;
+}
+.dropdown-navbar-item {
+    color: black;
 }
 
 .dropdown:hover .dropdown-content {
@@ -93,18 +95,18 @@ a:hover {
         color: white;
     }
     .navbar-item:hover, .dropdown-navbar-item:hover {
-        background-color: #eeeeee;
+        background: #eeeeee;
         color: black !important;
-        transition: color 0.25s linear;
-        -o-transition: color 0.25s linear;
-        -ms-transition: color 0.25s linear;
-        -moz-transition: color 0.25s linear;
-        -webkit-transition: color 0.25s linear;
+        transition: color 0.1s linear;
+        -o-transition: color 0.1s linear;
+        -ms-transition: color 0.1s linear;
+        -moz-transition: color 0.1s linear;
+        -webkit-transition: color 0.1s linear;
     }
     .dropdown-content {
         visibility: visible;
         opacity: 1;
-        background-color: #111;
+        background: #111;
     }
     .dropdown-titel {
         display: none;
@@ -112,4 +114,26 @@ a:hover {
     .dropdown-content {
         position: relative;
     }
+}
+
+.header-scrolled {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 90px;
+    line-height: 90px;
+    transition: all .1s;
+}
+
+object {
+    width: 58px;
+}
+
+.logo-name {
+    padding-left: 5px;
+    font-size: 20px;
+    letter-spacing: .15rem;
+}
+
+.active-router {
+    color: white;
+    background-color: #3949AB;
 }

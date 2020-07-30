@@ -1,4 +1,4 @@
-.home-about-wrapper {
+.home-video-container {
     padding: 50px 10px;
 }
 
@@ -19,11 +19,31 @@
     margin-bottom: 6px;
 }
 
-.video-content{
+.video-content {
     display: flex;
     padding: 10%;
     flex-direction: column;
     height: 100%;
     background-color: #E0E0E0;
+    width: 100%;
+}
+
+.row {
+    justify-content: space-between;
+}
+
+.col-right, .col-left {
+    flex: 0 0 49.5%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media only screen and (max-width:576px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+hr {
     width: 100%;
 }

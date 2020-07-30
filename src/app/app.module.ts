@@ -26,6 +26,7 @@ import { HomeAboutComponent } from './home/home-about/home-about.component';
 import { HomeServiceComponent } from './home/home-service/home-service.component';
 import { HomeWhyusComponent } from './home/home-whyus/home-whyus.component';
 import { HomeFeedbackComponent } from './home/home-feedback/home-feedback.component';
+import { HomeVideoComponent } from './home-video/home-video.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, resolve:{images: HomeResolver} },
@@ -54,6 +55,7 @@ const routes: Routes = [
     HomeServiceComponent,
     HomeWhyusComponent,
     HomeFeedbackComponent,
+    HomeVideoComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

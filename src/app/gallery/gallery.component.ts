@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Inject, AfterViewInit, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { style } from '@angular/animations';
 
@@ -25,15 +25,14 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   constructor(@Inject(DOCUMENT) private document: Document) { }
   ngOnInit(): void {
   }
-  ngAfterViewInit(){
-    setTimeout(()=> {
-      this.showSlides(this.slideIndex);
-    },2000)
+  ngAfterViewInit() {
+    this.showSlides(this.slideIndex);
+    console.log(this.document.getElementsByClassName('mySlides'))
 
   }
   openImgDialog(imgId: number) {
     this.currentIndex = imgId;
-    console.log(this.currentIndex )
+    console.log(this.currentIndex)
     $("#imgModal").modal('show');
     $('#carouselIndicators').carousel(4)
   }
@@ -47,39 +46,33 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   }
 
 
-
-   openModal() {
-    this.document.getElementById("myModal").style.display = "block";
+  openModal() {
+    this.document.getElementById("myModal").style.display = "flex";
   }
-   closeModal() {
+  closeModal() {
     this.document.getElementById("myModal").style.display = "none";
   }
 
-   plusSlides(n) {
+  plusSlides(n) {
     this.showSlides(this.slideIndex += n);
   }
 
-   currentSlide(n) {
+  currentSlide(n) {
     this.showSlides(this.slideIndex = n);
   }
-  
 
-   showSlides(n) {
-    var i;
-    let  slides = this.document.getElementsByClassName("mySlides");
-     let dots = this.document.getElementsByClassName("demo");
-    let  captionText = this.document.getElementById("caption");
-    console.log("test",dots)
-    if (n > slides.length) {this.slideIndex = 1}
-    if (n < 1) {this.slideIndex = slides.length}
+
+  showSlides(n) {
+    let i;
+    const slides =  this.document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;;
+    const captionText = this.document.getElementById("caption");
+    let e : ElementRef;
+    console.log( typeof(slides[0]))
+    if (n > slides.length) { this.slideIndex = 1 }
+    if (n < 1) { this.slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+      slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[this.slideIndex-1].style.display = "block";
-    dots[this.slideIndex-1].className += " active";
-    captionText.innerHTML = dots[this.slideIndex-1].alt;
+    slides[this.slideIndex - 1].style.display = "block";
   }
 }

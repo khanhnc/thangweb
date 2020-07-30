@@ -1,24 +1,17 @@
 <div class="navbar-content">
-  <a href="#home" class="navbar-item">Home</a>
-  <a href="#news" class="navbar-item">News</a>
+  <a  routerLink="/" class="navbar-item active-router">Home</a>
+  <a  routerLink="" class="navbar-item">News</a>
   <a href="#contact" class="navbar-item">Contact</a>
   <div class="dropdown">
-      <a href="#contact" class="navbar-item">
-          <div  class="dropdown-titel">Contact
-            <fa-icon class="dropdown-icon" [icon]="faSortDown"></fa-icon>
-          </div>
-          <div class="dropdown-content">
-  <a href="#news" class="navbar-item dropdown-navbar-item">Netestws</a>
-  <a href="#contact" class="navbar-item dropdown-navbar-item">tets</a>
-
-              <!-- <a class="dropdown-item" href="#test">Link 1</a>
-              <a class="dropdown-item" href="#test1">Link 2</a>
-              <a class="dropdown-item" href="#test2">Link 3</a> -->
-          </div>
-      </a>
+    <a href="#contact" class="navbar-item">
+      <div class="dropdown-titel">Contact
+        <fa-icon class="dropdown-icon" [icon]="faSortDown"></fa-icon>
+      </div>
+      <div class="dropdown-content">
+        <a href="#news" class=" dropdown-navbar-item">Netestws</a>
+        <a href="#contact" class="dropdown-navbar-item  ">tets</a>
+      </div>
+    </a>
   </div>
   <a href="#contact" class="navbar-item">Contact</a>
-
-
-
 </div>

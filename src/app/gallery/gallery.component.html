@@ -1,10 +1,13 @@
-<div class="gallery-container">
-    <h3>ẢNH</h3>
+<div class="section-content">
+    <div class="content-header">
+        <h3 class="ml-4 spacer">ẢNH</h3>
+        <a class="mr-4 btn btn-secondary" routerLink="#">Xem Thêm Ảnh</a>
+    </div>
     <hr>
-    <div class="row">
+    <div class="grid-row">
         <div class="column">
             <div class="cell" (click)="openModal();currentSlide(0)">
-                <img src="assets/images/gallery/potriat3.jpg">
+                <img src="assets/images/gallery/potriat2.jpg">
                 <div class="cell-overlay"> </div>
             </div>
 
@@ -42,7 +45,7 @@
         </div>
     </div>
 </div>
-
+<!-- 
 <div class="modal fade" id="imgModal" tabindex="-1" role="dialog">
     <button type="button" class=" close close-btn" data-dismiss="modal" aria-label="Close"> &times;
     </button>
@@ -65,5 +68,35 @@
             </div>
         </div>
     </div>
+
+</div> -->
+
+
+
+
+<div id="myModal" class="modal">
+    <span class="close cursor" (click)="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+            <img src="assets/images/gallery/gallery3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/images/gallery/gallery6.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/images/gallery/gallery5.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <img src="assets/images/gallery/gallery4.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+        <a class="next" (click)="plusSlides(1)">&#10095;</a>
+    </div>
+
 
 </div>

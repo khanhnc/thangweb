@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Inject } from '@angular/core';
 import { ToggleSideNav } from '../navigation/toggleSideNav.service';
-import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-side-nav',
@@ -16,7 +15,6 @@ export class SideNavComponent implements OnInit {
   ngOnInit(): void {
     this.toggleSideNavService.openSideNav.subscribe(() => this.openSideNav());
     this.toggleSideNavService.closeSideNav.subscribe(() => this.closeSideNav());
-
   }
 
   openSideNav() {
