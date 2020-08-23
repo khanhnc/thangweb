@@ -1,3 +1,5 @@
+@import "../../../colors.scss";
+
 .home-service-container {
     width: 80%;
     padding: 50px 0;
@@ -23,11 +25,8 @@
     height: 400px;
     background-image: url('/assets/images/home-service/portrait.jpg');
 }
-.more-button {
-    border-radius: 0;
-    color: white;
-}
 
-.more-button:hover {
-    color: white;
+.service-header {
+    text-align: center;
+    padding: 20px 0 100px 0;
 }

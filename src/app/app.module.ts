@@ -27,6 +27,7 @@ import { HomeServiceComponent } from './home/home-service/home-service.component
 import { HomeWhyusComponent } from './home/home-whyus/home-whyus.component';
 import { HomeFeedbackComponent } from './home/home-feedback/home-feedback.component';
 import { HomeVideoComponent } from './home-video/home-video.component';
+import { ModalComponent } from './gallery/modal/modal.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, resolve:{images: HomeResolver} },
@@ -56,6 +57,7 @@ const routes: Routes = [
     HomeWhyusComponent,
     HomeFeedbackComponent,
     HomeVideoComponent,
+    ModalComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

@@ -1,6 +1,4 @@
-a:hover {
-    cursor: pointer;
-}
+@import'../../colors.scss';
 
 .topNavbar {
     background: whitesmoke;
@@ -36,7 +34,7 @@ a:hover {
 }
 
 .navbar-item:hover {
-    background: #7986CB;
+    background: $primary-dark-color;
     color: white;
     transition: color 0.1s linear;
     -o-transition: color 0.1s linear;
@@ -46,7 +44,7 @@ a:hover {
 }
 
 .dropdown-navbar-item:hover {
-    background: #7986CB;
+    background: $primary-dark-color;
     color: white;
 }
 
@@ -66,6 +64,7 @@ a:hover {
     opacity: 0;
     transition: visibility 0s, opacity 0.1s linear;
 }
+
 .dropdown-navbar-item {
     color: black;
 }
@@ -135,5 +134,5 @@ object {
 
 .active-router {
     color: white;
-    background-color: #3949AB;
+    background-color: $primary-color;
 }

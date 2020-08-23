@@ -1,0 +1,35 @@
+@import "../../colors.scss";
+
+.footer-wrapper {
+    background: $primary-light-color;
+}
+
+.container {
+    color: white;
+    padding: 20px;
+}
+
+.footer-brand-text {
+    margin: 0 0 0 5px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.logo-col {
+    display: flex;
+    margin: auto;
+}
+
+.footer-logo object {
+    width: 40px;
+}
+
+.col p {
+    margin: .25em;
+}
+
+.social-logo {
+    padding: 0 10px 0 0;
+    color: white;
+}

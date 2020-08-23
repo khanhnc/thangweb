@@ -4,7 +4,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 @Component({
   selector: 'app-home-feedback',
   templateUrl: './home-feedback.component.html',
-  styleUrls: ['./home-feedback.component.css']
+  styleUrls: ['./home-feedback.component.scss']
 })
 export class HomeFeedbackComponent implements OnInit {
 

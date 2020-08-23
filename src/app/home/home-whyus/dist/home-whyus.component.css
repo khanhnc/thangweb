@@ -1,0 +1,48 @@
+.home-whyus-container {
+  padding: 25px 0;
+}
+
+.row {
+  margin: auto;
+  justify-content: space-between;
+}
+
+.col-sm {
+  padding-left: 0;
+  padding-right: 0;
+  flex: 0 0 23%;
+}
+
+.content-box {
+  min-height: 350px;
+  padding: 40px 30px;
+  background: whitesmoke;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2), 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2px rgba(0, 0, 0, 0.12);
+}
+
+@media only screen and (max-width: 768px) {
+  .col-sm {
+    flex: 0 0 49%;
+  }
+
+  .col-sm {
+    margin: 5px 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-sm {
+    margin: 5px 0;
+  }
+
+  .content-box {
+    padding: 10px 50px;
+  }
+}
+.fa {
+  color: #00227a;
+}

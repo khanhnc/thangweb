@@ -1,9 +1,11 @@
 <div class="section-content">
-    <div class="content-header">
-        <h3 class="ml-4 spacer">ẢNH</h3>
-        <a class="mr-4 btn btn-secondary" routerLink="#">Xem Thêm Ảnh</a>
+    <div class="gallery-header">
+        <h3>ẢNH</h3>
+        <div>
+            <a type ="button" class="btn primary-button" style="color:white" routerLink="#">Xem Thêm Ảnh</a>
+        </div>
     </div>
-    <hr>
+    <hr class="header-line">
     <div class="grid-row">
         <div class="column">
             <div class="cell" (click)="openModal();currentSlide(0)">
@@ -45,58 +47,5 @@
         </div>
     </div>
 </div>
-<!-- 
-<div class="modal fade" id="imgModal" tabindex="-1" role="dialog">
-    <button type="button" class=" close close-btn" data-dismiss="modal" aria-label="Close"> &times;
-    </button>
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="carousel-content">
 
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item " *ngFor="let i of list_imgs; let index = index;"
-                                [ngClass]="{'active': index === 1}"> <img class="d-block" [src]="i.link">
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</div> -->
-
-
-
-
-<div id="myModal" class="modal">
-    <span class="close cursor" (click)="closeModal()">&times;</span>
-    <div class="modal-content">
-
-        <div class="mySlides">
-            <img src="assets/images/gallery/gallery3.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <img src="assets/images/gallery/gallery6.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <img src="assets/images/gallery/gallery5.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <img src="assets/images/gallery/gallery4.jpg" style="width:100%">
-        </div>
-
-        <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
-        <a class="next" (click)="plusSlides(1)">&#10095;</a>
-    </div>
-
-
-</div>
+<app-modal [list_imgs]="list_imgs" [openModalEvent]="openModalEvent"></app-modal>
