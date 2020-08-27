@@ -5,15 +5,12 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { ServiceComponent } from './service/service.component';
 import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule, ActivatedRoute } from '@angular/router';
 import { ServiceChgColorDirective } from './service/service-chg-color.directive';
 import { WhyusComponent } from './whyus/whyus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faBookOpen, faLightbulb, faHandshake, faHeart, faChartBar, faComments, faSmileWink } from '@fortawesome/free-solid-svg-icons';
 import { SideNavComponent } from './side-nav/side-nav.component';
@@ -27,14 +24,14 @@ import { HomeServiceComponent } from './home/home-service/home-service.component
 import { HomeWhyusComponent } from './home/home-whyus/home-whyus.component';
 import { HomeFeedbackComponent } from './home/home-feedback/home-feedback.component';
 import { HomeVideoComponent } from './home-video/home-video.component';
-import { ModalComponent } from './gallery/modal/modal.component';
+import { GalleryModule } from './gallery/gallery.module';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, resolve:{images: HomeResolver} },
   { path: 'lienhe', component:ContactComponent },
   { path: 'dichvu', component:ServiceComponent },
   { path: 'gioithieu', component: AboutComponent },
-
   { path: "**", redirectTo: "/" }
 
 ]
@@ -44,7 +41,6 @@ const routes: Routes = [
     NavigationComponent,
     HomeComponent,
     AboutComponent,
-    GalleryComponent,
     ServiceComponent,
     ContactComponent,
     ServiceChgColorDirective,
@@ -57,15 +53,17 @@ const routes: Routes = [
     HomeWhyusComponent,
     HomeFeedbackComponent,
     HomeVideoComponent,
-    ModalComponent,
   ],
   imports: [
+    
     RouterModule.forRoot(routes),
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     NgxPageScrollModule,
     FontAwesomeModule,
+    GalleryModule,
+
   ],
   providers: [ToggleSideNav, HomeResolver],
   bootstrap: [AppComponent]
@@ -73,6 +71,5 @@ const routes: Routes = [
 export class AppModule {
   constructor(private library: FaIconLibrary, private route: ActivatedRoute) {
     library.addIcons(faBookOpen, faLightbulb, faHandshake, faComments, faSmileWink, faHeart, faChartBar);
-
   }
 }

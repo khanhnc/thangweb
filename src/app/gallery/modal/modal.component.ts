@@ -4,24 +4,33 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  styleUrls: ['../gallery.component.scss']
 })
 export class ModalComponent implements OnInit {
   @Input() openModalEvent= new EventEmitter();
+  @Input() currentSlideEvent= new EventEmitter<number>();
   @Input() list_imgs = [];
 
   slideIndex = 1;
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor(@Inject(DOCUMENT) private document: Document) {
+   }
 
   ngOnInit(): void {
-    this.showSlides(this.slideIndex);
-    this.openModalEvent.subscribe(()=> this.openModal())
+    console.log("imgs", this.list_imgs)
+    setTimeout(() => {
+      this.currentSlideEvent.subscribe(value => this.currentSlide(value));
+      this.openModalEvent.subscribe(()=> this.openModal());
+    }, 2000);
   }
+
   closeModal() {  
     this.document.getElementById("myModal").style.display = "none";
   }
+  
   openModal() {
+    console.log("open thisModal", this.slideIndex);
+    return
     this.document.getElementById("myModal").style.display = "flex";
   }
 
@@ -29,20 +38,20 @@ export class ModalComponent implements OnInit {
     this.showSlides(this.slideIndex += n);
   }
 
-  currentSlide(n) {
-    this.showSlides(this.slideIndex = n);
+  currentSlide(slidenumber) {
+    console.log(slidenumber)
+    this.showSlides(this.slideIndex = slidenumber);
   }
 
   showSlides(n) {
-    const slides = this.document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;;
-    const captionText = this.document.getElementById("caption");
-    let e: ElementRef;
-    console.log(typeof (slides[0]))
-    if (n > slides.length) { this.slideIndex = 1 }
-    if (n < 1) { this.slideIndex = slides.length }
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[this.slideIndex - 1].style.display = "block";
+      const slides = this.document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;;
+      const captionText = this.document.getElementById("caption");
+      let e: ElementRef;
+      if (n > slides.length) { this.slideIndex = 1 }
+      if (n < 1) { this.slideIndex = slides.length }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[this.slideIndex - 1].style.display = "block";
   }
 }

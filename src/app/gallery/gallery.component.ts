@@ -7,7 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class GalleryComponent {
   @Output() openModalEvent = new EventEmitter();
-  @Output() currentSlideEvent = new EventEmitter();
+  @Output() currentSlideEvent = new EventEmitter<number>();
 
   list_imgs = [
     { link: 'assets/images/gallery/potriat3.jpg' },
@@ -23,12 +23,10 @@ export class GalleryComponent {
 
   openModal() {
     this.openModalEvent.emit();
-    // this.document.getElementById("myModal").style.display = "flex";
   }
 
   currentSlide(slideNumber) {
-    this.currentSlideEvent.emit();
+    this.currentSlideEvent.emit(slideNumber);
   }
-
 
 }
