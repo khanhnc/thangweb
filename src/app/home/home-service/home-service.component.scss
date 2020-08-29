@@ -30,3 +30,15 @@
     text-align: center;
     padding: 20px 0 100px 0;
 }
+
+@media only screen and (max-width: 574px) {
+    
+    .odd-row {
+        flex-direction: column-reverse;
+    }
+
+    .service-details {
+        padding-top:20px;
+    }
+
+}

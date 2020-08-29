@@ -1,15 +1,17 @@
-import { Component, OnInit, Inject, Input, EventEmitter, ElementRef } from '@angular/core';
+import { Component, OnInit, Inject, Input, EventEmitter, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { ModalItemComponent } from '../modal-item/modal-item.component';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['../gallery.component.scss']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent implements OnInit, AfterViewInit {
   @Input() openModalEvent= new EventEmitter();
   @Input() currentSlideEvent= new EventEmitter<number>();
   @Input() list_imgs = [];
+  @ViewChildren(ModalItemComponent) modalItems: QueryList<ModalItemComponent>;
 
   slideIndex = 1;
 
@@ -17,11 +19,13 @@ export class ModalComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    console.log("imgs", this.list_imgs)
-    setTimeout(() => {
-      this.currentSlideEvent.subscribe(value => this.currentSlide(value));
-      this.openModalEvent.subscribe(()=> this.openModal());
-    }, 2000);
+  }
+
+  ngAfterViewInit() {
+    this.currentSlideEvent.subscribe(value => this.currentSlide(value));
+    this.openModalEvent.subscribe(()=> this.openModal());
+    console.log(this.modalItems.toArray());
+    this.showSlides(this.slideIndex);
   }
 
   closeModal() {  
@@ -29,8 +33,7 @@ export class ModalComponent implements OnInit {
   }
   
   openModal() {
-    console.log("open thisModal", this.slideIndex);
-    return
+    console.log("open this Modal", this.slideIndex);
     this.document.getElementById("myModal").style.display = "flex";
   }
 

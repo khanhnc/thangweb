@@ -11,8 +11,5 @@ export class ModalItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log("link", this.link)
-
-  }
+  ngOnInit(): void {}
 }
