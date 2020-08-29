@@ -7,7 +7,7 @@ import { ModalItemComponent } from '../modal-item/modal-item.component';
   templateUrl: './modal.component.html',
   styleUrls: ['../gallery.component.scss']
 })
-export class ModalComponent implements OnInit, AfterViewInit {
+export class ModalComponent implements AfterViewInit {
   @Input() openModalEvent= new EventEmitter();
   @Input() currentSlideEvent= new EventEmitter<number>();
   @Input() list_imgs = [];
@@ -17,9 +17,6 @@ export class ModalComponent implements OnInit, AfterViewInit {
 
   constructor(@Inject(DOCUMENT) private document: Document) {
    }
-
-  ngOnInit(): void {
-  }
 
   ngAfterViewInit() {
     this.currentSlideEvent.subscribe(value => this.currentSlide(value));

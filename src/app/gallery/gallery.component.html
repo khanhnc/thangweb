@@ -6,46 +6,13 @@
         </div>
     </div>
     <hr class="header-line">
-    <div class="grid-row">
-        <div class="column">
-            <div class="cell" (click)="openModal();currentSlide(0)">
-                <img src="assets/images/gallery/potriat2.jpg">
-                <div class="cell-overlay"> </div>
-            </div>
-
-        </div>
-        <div class="column">
-            <div class="cell" (click)="openModal();currentSlide(1)">
-                <img src="assets/images/gallery/gallery2.jpg">
-                <div class="cell-overlay"></div>
-            </div>
-            <div class="cell" (click)="openModal();currentSlide(2)">
-                <img src="assets/images/gallery/gallery3.jpg">
-                <div class="cell-overlay"></div>
-            </div>
-
-        </div>
-        <div class="column">
-            <div class="cell" (click)="openModal();currentSlide(3)">
-                <img src="assets/images/gallery/potriat2.jpg">
-                <div class="cell-overlay"></div>
-
-            </div>
-
-        </div>
-        <div class="column">
-            <div class="cell" (click)="openModal();currentSlide(4)">
-                <img src="assets/images/gallery/gallery5.jpg">
-                <div class="cell-overlay"></div>
-
-            </div>
-            <div class="cell" (click)="openModal();currentSlide(5)">
-                <img src="assets/images/gallery/gallery6.jpg">
-                <div class="cell-overlay"></div>
-            </div>
-
-        </div>
-    </div>
+    <div class="grid-row"> 
+        <div class="grid-column" *ngFor= "let col of list_imgs; let i = index ">
+          <img *ngFor="let row of col; let j = index" [src]="row.link" style="width:100%">
+          <div class="cell-overlay"></div>
+        </div>   
+      </div>
+      
 </div>
 
 <app-modal [list_imgs]="list_imgs" [openModalEvent]="openModalEvent" [currentSlideEvent]="currentSlideEvent"></app-modal>
