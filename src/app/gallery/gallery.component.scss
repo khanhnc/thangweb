@@ -22,7 +22,7 @@
   position: absolute;
   width: 100%;
   height:100%;
-  top: 1px;
+  top: 0;
   left: 0;
   display: block;
   margin: auto;
@@ -67,11 +67,11 @@
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background:black;
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 1200px;
+  max-width: 800px;
 }
 
 /* The Close Button */
@@ -94,7 +94,9 @@
 .mySlides {
   display: none;
 }
-
+.mySlides img{
+  max-height: 100vh;
+}
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -154,4 +156,9 @@
   .grid-column {
     flex: 50%;
   }
+}
+
+.slide-img {
+  width: 100%;
+   max-height: 100vh;
 }

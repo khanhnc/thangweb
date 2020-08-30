@@ -8,8 +8,8 @@
     <hr class="header-line">
     <div class="grid-row"> 
         <div class="grid-column" *ngFor= "let col of list_imgs; let i = index ">
-          <div class="cell" *ngFor="let row of col; let j = index">
-            <img  [src]="row.link" style="width:100%">
+          <div class="cell" *ngFor="let row of col; let j = index" (click)="openModal();currentSlide(row.id)">
+            <img  [src]="row.link" style="width:100%" >
             <div class="cell-overlay"></div>
           </div>
         </div>   

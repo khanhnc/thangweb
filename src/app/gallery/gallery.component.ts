@@ -8,7 +8,6 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 export class GalleryComponent {
   @Output() openModalEvent = new EventEmitter();
   @Output() currentSlideEvent = new EventEmitter<number>();
-
   list_imgs = [];
 
   constructor() {
@@ -35,5 +34,4 @@ export class GalleryComponent {
   currentSlide(slideNumber) {
     this.currentSlideEvent.emit(slideNumber);
   }
-
 }

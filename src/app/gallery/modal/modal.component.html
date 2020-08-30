@@ -1,15 +1,13 @@
 <div id="myModal" class="modal">
     <span class="close cursor" (click)="closeModal()">&times;</span>
     <div class="modal-content">
-
-        <div class="mySlides" *ngFor="let img of list_imgs">
-            <modal-item  [link]="img.link" >
-            </modal-item>
+        <div *ngFor="let col of list_imgs">
+            <div class="mySlides" *ngFor="let img of col" >
+                <modal-item  [link]="img.link" >
+                </modal-item>
+            </div>
         </div>
-
         <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
         <a class="next" (click)="plusSlides(1)">&#10095;</a>
     </div>
-
-
 </div>
