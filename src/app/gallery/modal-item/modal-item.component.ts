@@ -13,6 +13,6 @@ export class ModalItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.link, this.isVisible)
-  }
+    
+    }
 }

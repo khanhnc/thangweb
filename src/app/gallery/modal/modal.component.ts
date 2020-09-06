@@ -41,7 +41,6 @@ export class ModalComponent implements AfterViewInit, OnInit {
     }
   }
 
-
   closeModal() {  
     this.document.getElementById("myModal").style.display = "none";
   }
@@ -65,7 +64,6 @@ export class ModalComponent implements AfterViewInit, OnInit {
       for (let i =0 ; i < this.list_imgs.length; i++) {
         for (let j =0 ; j < this.list_imgs[i].length; j ++) {
           if(this.slideIndex ===  this.list_imgs[i][j].id) {
-            console.log(  this.list_imgs[i][j].id)
             this.list_imgs[i][j].visibleInSlide = true;
           } else {
             this.list_imgs[i][j].visibleInSlide = false;

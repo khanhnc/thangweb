@@ -144,8 +144,7 @@
   margin-top: 2px;
   vertical-align: middle;
 }
-
-
+  
 @media screen and (max-width: 576px) {
   .grid-column {
     flex: 50%;
@@ -160,6 +159,7 @@
 .slide-invisible{
   display: none;
 }
+
 .slide-visible {
-display: block;
+  display: block;
 }
