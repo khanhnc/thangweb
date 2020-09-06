@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Input, EventEmitter, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Inject, Input, EventEmitter, ElementRef, ViewChildren, QueryList, AfterViewInit, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { ModalItemComponent } from '../modal-item/modal-item.component';
 
@@ -28,6 +28,20 @@ export class ModalComponent implements AfterViewInit, OnInit {
     this.openModalEvent.subscribe(()=> this.openModal());
   }
 
+  @HostListener('window:keyup', ['$event'])
+  handleKeyEvent(event: KeyboardEvent) {
+    if(event.code === "Escape") {
+      this.closeModal();
+    }
+    if(event.code === "ArrowLeft") {
+      this.plusSlides(-1);
+    }
+    if(event.code === "ArrowRight") {
+      this.plusSlides(1);
+    }
+  }
+
+
   closeModal() {  
     this.document.getElementById("myModal").style.display = "none";
   }
@@ -37,7 +51,6 @@ export class ModalComponent implements AfterViewInit, OnInit {
   }
 
   plusSlides(n) {
-    console.log("plusSlide", n)
     this.slideIndex += n
     this.showSlides();
   }
