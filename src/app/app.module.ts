@@ -25,15 +25,13 @@ import { HomeWhyusComponent } from './home/home-whyus/home-whyus.component';
 import { HomeFeedbackComponent } from './home/home-feedback/home-feedback.component';
 import { HomeVideoComponent } from './home-video/home-video.component';
 import { GalleryModule } from './gallery/gallery.module';
-import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, resolve:{images: HomeResolver} },
-  { path: 'lienhe', component:ContactComponent },
+  { path: '', pathMatch: 'full', redirectTo: "home" },
+  { path: 'home', component: HomeComponent , resolve:{images: HomeResolver} },
+  { path: 'lienhe',component:ContactComponent },
   { path: 'dichvu', component:ServiceComponent },
   { path: 'gioithieu', component: AboutComponent },
-  { path: "**", redirectTo: "/" }
-
 ]
 @NgModule({
   declarations: [
