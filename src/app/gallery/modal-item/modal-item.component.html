@@ -1,1 +1,1 @@
-<img [src]="link" class="slide-img">
+<img [src]="link" class="slide-img" [ngClass]="{'slide-visible': isVisible, 'slide-invisible': !isVisible}">

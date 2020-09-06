@@ -8,8 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ModalItemComponent implements OnInit {
 
   @Input('link') link: string;
+  @Input() isVisible: boolean;
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.link, this.isVisible)
+  }
 }

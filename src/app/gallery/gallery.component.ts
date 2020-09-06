@@ -13,7 +13,7 @@ export class GalleryComponent {
   constructor() {
     let single_dim_list = []
     for (let  i=0;i < 40;i++) {
-        single_dim_list.push ({id:i, link:'assets/images/gallery/' + i.toString() + '.jpg'});
+        single_dim_list.push ({id:i, link:'assets/images/gallery/' + i.toString() + '.jpg', visibleInSlide:false});
      }
      let four_dim_list = [[],[],[],[]];
      let i = 0;

@@ -8,22 +8,24 @@ import { ModalItemComponent } from '../modal-item/modal-item.component';
   styleUrls: ['../gallery.component.scss']
 })
 
-export class ModalComponent implements AfterViewInit {
+export class ModalComponent implements AfterViewInit, OnInit {
   @Input() openModalEvent= new EventEmitter();
   @Input() currentSlideEvent= new EventEmitter<number>();
   @Input() list_imgs = [];
   @ViewChildren(ModalItemComponent) modalItems: QueryList<ModalItemComponent>;
 
-   slideIndex = 1;
+  slideIndex = 1;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
    }
 
-  ngAfterViewInit() {
-    console.log(this.list_imgs)
+   ngOnInit() {
+    this.showSlides();
+   }
+    
+   ngAfterViewInit() {
     this.currentSlideEvent.subscribe(value => this.currentSlide(value));
     this.openModalEvent.subscribe(()=> this.openModal());
-    this.showSlides(this.slideIndex);
   }
 
   closeModal() {  
@@ -36,25 +38,26 @@ export class ModalComponent implements AfterViewInit {
 
   plusSlides(n) {
     console.log("plusSlide", n)
-    this.showSlides(this.slideIndex += n);
+    this.slideIndex += n
+    this.showSlides();
   }
 
   currentSlide(slidenumber) {
-    console.log("before CurrentSlide", this.slideIndex,slidenumber)
     this.slideIndex = slidenumber;
-    this.showSlides(this.slideIndex);
-    console.log("after CurrentSlide", this.slideIndex)
+    this.showSlides();
   }
 
-  showSlides(n:number) {
-    const slides = this.document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;;
-    console.log(slides) 
-    let e: ElementRef;
-      if (n > slides.length) { this.slideIndex = 1 }
-      if (n < 0) { this.slideIndex = slides.length }
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+  showSlides() {
+      if(this.slideIndex > 40) {this.slideIndex = 0};
+      for (let i =0 ; i < this.list_imgs.length; i++) {
+        for (let j =0 ; j < this.list_imgs[i].length; j ++) {
+          if(this.slideIndex ===  this.list_imgs[i][j].id) {
+            console.log(  this.list_imgs[i][j].id)
+            this.list_imgs[i][j].visibleInSlide = true;
+          } else {
+            this.list_imgs[i][j].visibleInSlide = false;
+          }
+        }
       }
-      slides[this.slideIndex].style.display = "block";
-  }
+    }
 }

@@ -3,7 +3,7 @@
     <div class="modal-content">
         <div *ngFor="let col of list_imgs">
             <div class="mySlides" *ngFor="let img of col" >
-                <modal-item  [link]="img.link" >
+                <modal-item  [link]="img.link" [isVisible]="img.visibleInSlide">
                 </modal-item>
             </div>
         </div>
