@@ -1,17 +1,18 @@
 <div class="navbar-content">
-  <a  routerLink="home" class="navbar-item"  routerLinkActive="active-router">Home</a>
+  <a  routerLink="home" class="navbar-item"  routerLinkActive="active-router">Trang Chủ</a>
   <a  routerLink="gioithieu" routerLinkActive="active-router" class="navbar-item">Giới Thiệu</a>
-  <a routerLink="banggia" routerLinkActive="active-router" class="navbar-item">Bảng Giá </a>
   <div class="dropdown">
-    <a href="#contact" class="navbar-item">
-      <div class="dropdown-titel">Contact
+    <a  href="javascript:void(0)" class="navbar-item" [routerLinkActive]="['active']">
+      <div class="dropdown-titel">Thư Viện 
         <fa-icon class="dropdown-icon" [icon]="faSortDown"></fa-icon>
       </div>
       <div class="dropdown-content">
-        <a href="#news" class=" dropdown-navbar-item">Netestws</a>
-        <a href="#contact" class="dropdown-navbar-item  ">tets</a>
+        <a  routerLink="gioithieu" class=" dropdown-navbar-item">Ảnh</a>
+        <a routerLinkActive="active-router"class=" dropdown-navbar-item">Ảnh</a>
+        <a routerLinkActive="active-router" class="dropdown-navbar-item">Ghi Hình</a>
       </div>
     </a>
   </div>
+  <a routerLink="banggia" routerLinkActive="active-router" class="navbar-item">Bảng Giá </a>
   <a routerLink="lienhe" class="navbar-item">Liên Hệ</a>
 </div>
