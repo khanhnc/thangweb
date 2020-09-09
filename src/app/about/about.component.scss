@@ -1,59 +1,7 @@
-.about-container {
-    padding-bottom: 50px;
-    padding-top: 100px;
+.about-logo {
+    float: left;
+    padding: 0 50px 25px 50px;
 }
-
-.introduce-text {
-    padding-top: 20px;
-    font-size: 20px;
-    font-weight: 200;
-}
-
-.card {
-    border: none;
-    border-radius: 0;
-    background-color: whitesmoke;
-}
-
-.card-img, .card-img-top {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.card-text {
-    text-align: center;
-    padding-top: 10px;
-}
-
-.img-description p {
-    font-size: 14px;
-    text-align: center;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-style: oblique;
-}
-
-h3 {
-    color: black;
-}
-
-.img-container {
-    position: relative;
-}
-
-.img-overlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: whitesmoke;
-}
-
-.img-container:hover .img-overlay {
-    opacity: .6;
+.about-logo object {
+    width: 150px;
 }

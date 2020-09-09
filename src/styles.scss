@@ -45,3 +45,16 @@ a:hover {
 .header-line {
   border-top: 1px solid $line-color;
 }
+
+.sub-banner-section {
+  height: 200px;
+  width:100%;
+  background: linear-gradient(to left, #1CB5E0 0%, #000851 100%);
+}
+
+.banner-text {
+  color:white;
+  margin:auto;
+  line-height: 200px;
+  letter-spacing: .25em;
+} 
