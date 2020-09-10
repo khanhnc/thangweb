@@ -30,7 +30,7 @@ import { HomeGalleryComponent } from './home/home-gallery/home-gallery.component
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: "home" },
-  { path: 'home', component: HomeComponent , resolve:{images: HomeResolver} },
+  { path: 'home', component: HomeComponent},
   { path: 'lienhe',component:ContactComponent },
   { path: 'anh',component:ImgGalleryComponent },
   { path: 'dichvu', component:ServiceComponent },

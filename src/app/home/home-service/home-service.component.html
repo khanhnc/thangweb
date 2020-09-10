@@ -5,7 +5,7 @@
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <div class="home-service-img child">
+            <div class="home-service-img child"  [ngStyle]="{'background-image': 'url('+ serviceImgs[0] + ')'}">
             </div>
         </div>
         <div class="col-sm-8 service-details">
@@ -40,12 +40,12 @@
             <a type="button" class="btn primary-button" style="color:white">Tìm Hiểu Thêm</a>
         </div>
         <div class="col-sm-4">
-            <div class="home-service-img wedd"></div>
+            <div class="home-service-img wedd" [ngStyle]="{'background-image': 'url('+ serviceImgs[1] + ')'}"></div>
         </div>
     </div>
     <div class="row pt-5">
         <div class="col-sm-4">
-            <div class="home-service-img portrait"></div>
+            <div class="home-service-img portrait" [ngStyle]="{'background-image': 'url('+ serviceImgs[2] + ')'}"></div>
         </div>
         <div class="col-sm-8 service-details">
             <h4>Ảnh Cưới</h4>
