@@ -19,7 +19,6 @@ import { NavContent } from './navigation/nav-content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeResolver } from './home/home.resolver.service';
 import { FooterComponent } from './footer/footer.component';
-import { HomeAboutComponent } from './home/home-about/home-about.component';
 import { HomeServiceComponent } from './home/home-service/home-service.component';
 import { HomeWhyusComponent } from './home/home-whyus/home-whyus.component';
 import { HomeFeedbackComponent } from './home/home-feedback/home-feedback.component';
@@ -27,12 +26,13 @@ import { HomeVideoComponent } from './home-video/home-video.component';
 import { GalleryModule } from './gallery/gallery.module';
 import { ImgGalleryComponent } from './img-gallery/img-gallery.component';
 import { PriceListComponent } from './price-list/price-list.component';
+import { HomeGalleryComponent } from './home/home-gallery/home-gallery.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: "home" },
   { path: 'home', component: HomeComponent , resolve:{images: HomeResolver} },
   { path: 'lienhe',component:ContactComponent },
-  { path: 'banggia',component:ContactComponent },
+  { path: 'anh',component:ImgGalleryComponent },
   { path: 'dichvu', component:ServiceComponent },
   { path: 'gioithieu', component: AboutComponent },
 ]
@@ -49,13 +49,13 @@ const routes: Routes = [
     SideNavComponent,
     NavContent,
     FooterComponent,
-    HomeAboutComponent,
     HomeServiceComponent,
     HomeWhyusComponent,
     HomeFeedbackComponent,
     HomeVideoComponent,
     ImgGalleryComponent,
     PriceListComponent,
+    HomeGalleryComponent,
   ],
   imports: [
     

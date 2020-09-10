@@ -1,11 +1,4 @@
-<div class="section-content">
-    <div class="gallery-header">
-        <h3>ẢNH</h3>
-        <div>
-            <a type ="button" class="btn primary-button" style="color:white" routerLink="#">Xem Thêm Ảnh</a>
-        </div>
-    </div>
-    <hr class="header-line">
+   
     <div class="grid-row"> 
         <div class="grid-column" *ngFor= "let col of list_imgs; let i = index ">
           <div class="cell" *ngFor="let row of col; let j = index" (click)="openModal();currentSlide(row.id)">
@@ -14,7 +7,4 @@
           </div>
         </div>   
       </div>
-      
-</div>
-
 <app-modal [list_imgs]="list_imgs" [openModalEvent]="openModalEvent" [currentSlideEvent]="currentSlideEvent"></app-modal>

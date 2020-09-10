@@ -1,41 +1,46 @@
-<div class="container service-container">
-    <h3 class="header-typo letter-space text-black pb-3">DỊCH VỤ</h3>
-    <blockquote class="blockquote text-center">
-        <p class="mb-0 text-italic">Những khách hàng khó tính nhất chính là nguồn học vĩ đại nhất của bạn.</p>
-        <footer class="blockquote-footer text-italic">Bill Gates <cite title="Source Title"></cite></footer>
-    </blockquote>
-    <div class="service-box pt-5">
-        <div class="row">
-            <div class="col-sm service-col" #photograph>
-                <div class="service-col-logo" (click)="currentContent = 'photograph'"
-                    [ngClass]="{'text-black': currentContent == 'photograph'}">
-                    <fa-icon [icon]="faCamera" class="fa-3x"></fa-icon>
-                    <h5 class="letter-space pt-2">CHỤP HÌNH</h5>
-                </div>
-            </div>
-            <div class="col-sm service-col" #setting>
-                <div class="service-col-logo" (click)="currentContent = 'setting'"
-                    [ngClass]="{'text-black': currentContent == 'setting'}">
-                    <fa-icon [icon]="faVideo" class="fa-3x"></fa-icon>
-                    <h5 class="letter-space pt-2"> QUAY PHIM</h5>
-                </div>
-            </div>
-            <div class="col-sm service-col" #invitation>
-                <div class="service-col-logo" (click)="currentContent = 'invitation'"
-                    [ngClass]="{'text-black': currentContent == 'invitation'}">
-                    <fa-icon [icon]="['fas', 'book-open']" class="fa-3x"></fa-icon>
-                    <h5 class="letter-space pt-2">THIỆP CƯỚI</h5>
-                </div>
-            </div>
-        </div>
-        <div class="service-content pt-5">
-            <div class="test" *ngIf="currentContent == 'photograph'"> Chúng tôi cung cấp các dịch vụ chụp ảnh cưới,
-                ảnh gia đình, ảnh kỷ yếu, ảnh thẻ.... Những gói dịch vụ tương ứng với mức giá phù hợp. Mọi thông tin chi
-                tiết về các gói dịch vụ các bạn có thể xem ở phần <a href="#">Dịch Vụ Chụp Hình</a> </div>
-            <div class="test" *ngIf="currentContent == 'setting'"> Quay phim - chụp hình Lễ Thành hôn, lễ vu quy, sự kiện <a href="#">Dịch Vụ Quay Phim</a>  </div>
-            <div class="test" *ngIf="currentContent == 'invitation'"> Chúng tôi nhận làm thiệp cưới với nhiều mẫu
-                thiệp có sẵn cũng như những mẫu thiệp được thiết kế theo ý nguyện của khách hàng. Danh sách các mẫu
-                thiệp và giá cả các bạn có thể tham khảo ở phần <a href="#">Thiệp Cưới</a> </div>
-        </div>
+<div class="sub-banner-section">
+    <div class="container">
+    <h3 class="banner-text">DICH VU</h3>
     </div>
+</div>
+<div class="container section-content">
+    <div class="test" > Chúng tôi cung cấp các dịch vụ chụp ảnh cưới,
+        ảnh gia đình, ảnh kỷ yếu, ảnh thẻ.... Những gói dịch vụ tương ứng với mức giá phù hợp. Mọi thông tin chi
+        tiết về các gói dịch vụ các bạn có thể xem ở phần <a href="#">Dịch Vụ Chụp Hình</a> </div>
+    <div class="test" > Quay phim - chụp hình Lễ Thành hôn, lễ vu quy, sự kiện <a href="#">Dịch Vụ Quay Phim</a>  </div>
+    <div class="test" > Chúng tôi nhận làm thiệp cưới với nhiều mẫu
+        thiệp có sẵn cũng như những mẫu thiệp được thiết kế theo ý nguyện của khách hàng. Danh sách các mẫu
+        thiệp `và giá cả các bạn có thể tham khảo ở phần <a href="#">Thiệp Cưới</a> </div>
+  
+
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
 </div>

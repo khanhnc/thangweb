@@ -11,7 +11,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 export class HomeComponent implements OnInit {
   linkSrc: SafeUrl
   imagesList: SafeUrl[] = [];
-  ads_text = [
+  qc_text = [
     "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.",
     "EX EA DIFFICULTATE ILLAE FALLACILOQUAE.",
     "UT AIT ACCIUS, MALITIAE NATAE SUNT",

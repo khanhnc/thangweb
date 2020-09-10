@@ -7,8 +7,8 @@
         </ol>
         <div class="carousel-inner">
             <div *ngFor="let img of imagesList; let i = index" class="carousel-item" [ngClass]="{'active': i ===1 }">
-                <div class="ad-text">
-                    <h1>{{ads_text[i]}} </h1>
+                <div class="qc-text">
+                    <h2>{{qc_text[i]}} </h2>
                     <a type="button" class="btn-lg btn-light">XEM CHI TIẾT</a>
                 </div>
                 <div class="d-block w-100 carousel-img" [ngStyle]="{'background-image': 'url('+ img + ')'}"></div>
@@ -25,8 +25,7 @@
         </div>
     </div>
 </div>
-<app-home-about></app-home-about>
 <app-home-service></app-home-service>
-<app-gallery></app-gallery>
+<app-home-gallery></app-home-gallery>
 <app-home-whyus></app-home-whyus>
 <app-home-video></app-home-video>
