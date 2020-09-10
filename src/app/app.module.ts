@@ -26,11 +26,13 @@ import { HomeFeedbackComponent } from './home/home-feedback/home-feedback.compon
 import { HomeVideoComponent } from './home-video/home-video.component';
 import { GalleryModule } from './gallery/gallery.module';
 import { ImgGalleryComponent } from './img-gallery/img-gallery.component';
+import { PriceListComponent } from './price-list/price-list.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: "home" },
   { path: 'home', component: HomeComponent , resolve:{images: HomeResolver} },
   { path: 'lienhe',component:ContactComponent },
+  { path: 'banggia',component:ContactComponent },
   { path: 'dichvu', component:ServiceComponent },
   { path: 'gioithieu', component: AboutComponent },
 ]
@@ -53,6 +55,7 @@ const routes: Routes = [
     HomeFeedbackComponent,
     HomeVideoComponent,
     ImgGalleryComponent,
+    PriceListComponent,
   ],
   imports: [
     
