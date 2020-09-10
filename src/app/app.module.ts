@@ -25,6 +25,7 @@ import { HomeWhyusComponent } from './home/home-whyus/home-whyus.component';
 import { HomeFeedbackComponent } from './home/home-feedback/home-feedback.component';
 import { HomeVideoComponent } from './home-video/home-video.component';
 import { GalleryModule } from './gallery/gallery.module';
+import { ImgGalleryComponent } from './img-gallery/img-gallery.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: "home" },
@@ -51,6 +52,7 @@ const routes: Routes = [
     HomeWhyusComponent,
     HomeFeedbackComponent,
     HomeVideoComponent,
+    ImgGalleryComponent,
   ],
   imports: [
     

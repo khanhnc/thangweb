@@ -27,6 +27,10 @@ a:hover {
   padding: 50px 10px;
 }
 
+a {
+  color: black;  
+}
+
 .sticky {
   position: sticky;
   top: 0;
@@ -47,7 +51,7 @@ a:hover {
 }
 
 .sub-banner-section {
-  height: 200px;
+  height: 150px;
   width:100%;
   background: linear-gradient(to left, #1CB5E0 0%, #000851 100%);
 }
@@ -55,6 +59,6 @@ a:hover {
 .banner-text {
   color:white;
   margin:auto;
-  line-height: 200px;
+  line-height: 150px;
   letter-spacing: .25em;
-} 
+}

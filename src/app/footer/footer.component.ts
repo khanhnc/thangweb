@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faPhoneAlt, faMapMarkedAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
