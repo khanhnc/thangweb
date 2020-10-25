@@ -18,14 +18,16 @@ export class FooterComponent implements OnInit {
     let setColor = setInterval(() => {
       let logoDocument: any = this.document.getElementById("footer-logo");
       let contentDoc = logoDocument.contentDocument;
-      if (contentDoc.getElementsByTagName("svg").length) {
-        contentDoc.getElementsByTagName("svg")[0].style.fill = "white";;
-        contentDoc.getElementsByTagName("tspan")[0].style.fill = "white";
-        let iconPaths = contentDoc.getElementsByTagName("path");
-        for (let i = 0; i < iconPaths.length; i++) {
-          iconPaths[i].style.stroke = "#6e74dc";
+      if(contentDoc) {
+        if (contentDoc.getElementsByTagName("svg").length) {
+          contentDoc.getElementsByTagName("svg")[0].style.fill = "white";;
+          contentDoc.getElementsByTagName("tspan")[0].style.fill = "white";
+          let iconPaths = contentDoc.getElementsByTagName("path");
+          for (let i = 0; i < iconPaths.length; i++) {
+            iconPaths[i].style.stroke = "#6e74dc";
+          }
+          clearInterval(setColor);
         }
-        clearInterval(setColor);
       }
     }, 50)
   }

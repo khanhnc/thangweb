@@ -153,7 +153,11 @@
 
 .slide-img {
   width: 100%;
-   max-height: 100vh;
+  max-height: 100vh;
+  height: 100vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .slide-invisible{
@@ -163,3 +167,4 @@
 .slide-visible {
   display: block;
 }
+

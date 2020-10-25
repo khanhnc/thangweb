@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
@@ -8,24 +8,11 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 export class GalleryComponent {
   @Output() openModalEvent = new EventEmitter();
   @Output() currentSlideEvent = new EventEmitter<number>();
-  list_imgs = [];
+  @Input() list_imgs = [];
+  @Input() total_imgs = 0;
 
   constructor() {
-    let single_dim_list = []
-    for (let  i=0;i < 40;i++) {
-        single_dim_list.push ({id:i, link:'assets/images/gallery/' + i.toString() + '.jpg', visibleInSlide:false});
-     }
-     let four_dim_list = [[],[],[],[]];
-     let i = 0;
-      for (let  j=0;j < 40;j++) {
-        four_dim_list[i].push(single_dim_list[j])
-        if(i <3) {
-          i ++;
-        }else {
-          i = 0;
-        }
-      }
-      this.list_imgs = four_dim_list;
+    console.log(this.total_imgs)
     }
   openModal() {
     this.openModalEvent.emit();

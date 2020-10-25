@@ -1,4 +1,5 @@
-import { Component, OnInit, Inject, Input, EventEmitter, ElementRef, ViewChildren, QueryList, AfterViewInit, HostListener } from '@angular/core';
+import { Component, OnInit, Inject, Input, EventEmitter, ElementRef, ViewChildren, 
+  QueryList, AfterViewInit, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { ModalItemComponent } from '../modal-item/modal-item.component';
 
@@ -12,13 +13,13 @@ export class ModalComponent implements AfterViewInit, OnInit {
   @Input() openModalEvent= new EventEmitter();
   @Input() currentSlideEvent= new EventEmitter<number>();
   @Input() list_imgs = [];
+  @Input() total_imgs = 0;
   @ViewChildren(ModalItemComponent) modalItems: QueryList<ModalItemComponent>;
-
   slideIndex = 1;
 
   constructor(@Inject(DOCUMENT) private document: Document) {
-   }
-
+  }
+    
    ngOnInit() {
     this.showSlides();
    }
@@ -52,6 +53,7 @@ export class ModalComponent implements AfterViewInit, OnInit {
   plusSlides(n) {
     this.slideIndex += n
     this.showSlides();
+    console.log(this.slideIndex, this.total_imgs)
   }
 
   currentSlide(slidenumber) {
@@ -60,7 +62,7 @@ export class ModalComponent implements AfterViewInit, OnInit {
   }
 
   showSlides() {
-      if(this.slideIndex > 40) {this.slideIndex = 0};
+      if(this.slideIndex >= this.total_imgs) {this.slideIndex = 0};
       for (let i =0 ; i < this.list_imgs.length; i++) {
         for (let j =0 ; j < this.list_imgs[i].length; j ++) {
           if(this.slideIndex ===  this.list_imgs[i][j].id) {
